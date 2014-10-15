@@ -89,7 +89,7 @@ webpackJsonp([0],[
 	        "Components & Properties",
 	        "JSX",
 	        "State",
-	        "Event Handlers & Composition",
+	        "Composition, PropTypes, & Event Handlers",
 	        "Mixins",
 	        "Top-Down Data Flow & shouldComponentUpdate"
 	      ];

@@ -82,7 +82,7 @@ function loadIndex() {
         "Components & Properties",
         "JSX",
         "State",
-        "Event Handlers & Composition",
+        "Composition, PropTypes, & Event Handlers",
         "Mixins",
         "Top-Down Data Flow & shouldComponentUpdate"
       ];

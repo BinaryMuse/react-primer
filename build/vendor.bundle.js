@@ -5140,10 +5140,10 @@
 	
 	"use strict";
 	
-	var CSSPropertyOperations = __webpack_require__(/*! ./CSSPropertyOperations */ 80);
+	var CSSPropertyOperations = __webpack_require__(/*! ./CSSPropertyOperations */ 105);
 	var DOMProperty = __webpack_require__(/*! ./DOMProperty */ 54);
 	var DOMPropertyOperations = __webpack_require__(/*! ./DOMPropertyOperations */ 24);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactComponent = __webpack_require__(/*! ./ReactComponent */ 27);
 	var ReactBrowserEventEmitter = __webpack_require__(/*! ./ReactBrowserEventEmitter */ 60);
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
@@ -5567,37 +5567,37 @@
 	
 	"use strict";
 	
-	var BeforeInputEventPlugin = __webpack_require__(/*! ./BeforeInputEventPlugin */ 82);
-	var ChangeEventPlugin = __webpack_require__(/*! ./ChangeEventPlugin */ 83);
-	var ClientReactRootIndex = __webpack_require__(/*! ./ClientReactRootIndex */ 84);
-	var CompositionEventPlugin = __webpack_require__(/*! ./CompositionEventPlugin */ 85);
-	var DefaultEventPluginOrder = __webpack_require__(/*! ./DefaultEventPluginOrder */ 86);
-	var EnterLeaveEventPlugin = __webpack_require__(/*! ./EnterLeaveEventPlugin */ 87);
+	var BeforeInputEventPlugin = __webpack_require__(/*! ./BeforeInputEventPlugin */ 80);
+	var ChangeEventPlugin = __webpack_require__(/*! ./ChangeEventPlugin */ 81);
+	var ClientReactRootIndex = __webpack_require__(/*! ./ClientReactRootIndex */ 82);
+	var CompositionEventPlugin = __webpack_require__(/*! ./CompositionEventPlugin */ 83);
+	var DefaultEventPluginOrder = __webpack_require__(/*! ./DefaultEventPluginOrder */ 84);
+	var EnterLeaveEventPlugin = __webpack_require__(/*! ./EnterLeaveEventPlugin */ 85);
 	var ExecutionEnvironment = __webpack_require__(/*! ./ExecutionEnvironment */ 44);
-	var HTMLDOMPropertyConfig = __webpack_require__(/*! ./HTMLDOMPropertyConfig */ 88);
-	var MobileSafariClickEventPlugin = __webpack_require__(/*! ./MobileSafariClickEventPlugin */ 89);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var HTMLDOMPropertyConfig = __webpack_require__(/*! ./HTMLDOMPropertyConfig */ 86);
+	var MobileSafariClickEventPlugin = __webpack_require__(/*! ./MobileSafariClickEventPlugin */ 87);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactComponentBrowserEnvironment =
-	  __webpack_require__(/*! ./ReactComponentBrowserEnvironment */ 90);
-	var ReactDefaultBatchingStrategy = __webpack_require__(/*! ./ReactDefaultBatchingStrategy */ 91);
+	  __webpack_require__(/*! ./ReactComponentBrowserEnvironment */ 89);
+	var ReactDefaultBatchingStrategy = __webpack_require__(/*! ./ReactDefaultBatchingStrategy */ 90);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
-	var ReactDOMButton = __webpack_require__(/*! ./ReactDOMButton */ 92);
-	var ReactDOMForm = __webpack_require__(/*! ./ReactDOMForm */ 93);
-	var ReactDOMImg = __webpack_require__(/*! ./ReactDOMImg */ 94);
-	var ReactDOMInput = __webpack_require__(/*! ./ReactDOMInput */ 95);
-	var ReactDOMOption = __webpack_require__(/*! ./ReactDOMOption */ 96);
-	var ReactDOMSelect = __webpack_require__(/*! ./ReactDOMSelect */ 97);
-	var ReactDOMTextarea = __webpack_require__(/*! ./ReactDOMTextarea */ 98);
-	var ReactEventListener = __webpack_require__(/*! ./ReactEventListener */ 99);
-	var ReactInjection = __webpack_require__(/*! ./ReactInjection */ 100);
+	var ReactDOMButton = __webpack_require__(/*! ./ReactDOMButton */ 91);
+	var ReactDOMForm = __webpack_require__(/*! ./ReactDOMForm */ 92);
+	var ReactDOMImg = __webpack_require__(/*! ./ReactDOMImg */ 93);
+	var ReactDOMInput = __webpack_require__(/*! ./ReactDOMInput */ 94);
+	var ReactDOMOption = __webpack_require__(/*! ./ReactDOMOption */ 95);
+	var ReactDOMSelect = __webpack_require__(/*! ./ReactDOMSelect */ 96);
+	var ReactDOMTextarea = __webpack_require__(/*! ./ReactDOMTextarea */ 97);
+	var ReactEventListener = __webpack_require__(/*! ./ReactEventListener */ 98);
+	var ReactInjection = __webpack_require__(/*! ./ReactInjection */ 99);
 	var ReactInstanceHandles = __webpack_require__(/*! ./ReactInstanceHandles */ 35);
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
-	var SelectEventPlugin = __webpack_require__(/*! ./SelectEventPlugin */ 101);
-	var ServerReactRootIndex = __webpack_require__(/*! ./ServerReactRootIndex */ 102);
-	var SimpleEventPlugin = __webpack_require__(/*! ./SimpleEventPlugin */ 103);
-	var SVGDOMPropertyConfig = __webpack_require__(/*! ./SVGDOMPropertyConfig */ 104);
+	var SelectEventPlugin = __webpack_require__(/*! ./SelectEventPlugin */ 100);
+	var ServerReactRootIndex = __webpack_require__(/*! ./ServerReactRootIndex */ 101);
+	var SimpleEventPlugin = __webpack_require__(/*! ./SimpleEventPlugin */ 102);
+	var SVGDOMPropertyConfig = __webpack_require__(/*! ./SVGDOMPropertyConfig */ 103);
 	
-	var createFullPageComponent = __webpack_require__(/*! ./createFullPageComponent */ 105);
+	var createFullPageComponent = __webpack_require__(/*! ./createFullPageComponent */ 104);
 	
 	function inject() {
 	  ReactInjection.EventEmitter.injectReactEventListener(
@@ -7731,7 +7731,7 @@
 	"use strict";
 	
 	var DOMPropertyOperations = __webpack_require__(/*! ./DOMPropertyOperations */ 24);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactComponent = __webpack_require__(/*! ./ReactComponent */ 27);
 	var ReactDescriptor = __webpack_require__(/*! ./ReactDescriptor */ 31);
 	
@@ -12188,168 +12188,6 @@
 
 /***/ },
 /* 80 */
-/*!**********************************************!*\
-  !*** ./~/react/lib/CSSPropertyOperations.js ***!
-  \**********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule CSSPropertyOperations
-	 * @typechecks static-only
-	 */
-	
-	"use strict";
-	
-	var CSSProperty = __webpack_require__(/*! ./CSSProperty */ 130);
-	
-	var dangerousStyleValue = __webpack_require__(/*! ./dangerousStyleValue */ 131);
-	var hyphenateStyleName = __webpack_require__(/*! ./hyphenateStyleName */ 132);
-	var memoizeStringOnly = __webpack_require__(/*! ./memoizeStringOnly */ 65);
-	
-	var processStyleName = memoizeStringOnly(function(styleName) {
-	  return hyphenateStyleName(styleName);
-	});
-	
-	/**
-	 * Operations for dealing with CSS properties.
-	 */
-	var CSSPropertyOperations = {
-	
-	  /**
-	   * Serializes a mapping of style properties for use as inline styles:
-	   *
-	   *   > createMarkupForStyles({width: '200px', height: 0})
-	   *   "width:200px;height:0;"
-	   *
-	   * Undefined values are ignored so that declarative programming is easier.
-	   * The result should be HTML-escaped before insertion into the DOM.
-	   *
-	   * @param {object} styles
-	   * @return {?string}
-	   */
-	  createMarkupForStyles: function(styles) {
-	    var serialized = '';
-	    for (var styleName in styles) {
-	      if (!styles.hasOwnProperty(styleName)) {
-	        continue;
-	      }
-	      var styleValue = styles[styleName];
-	      if (styleValue != null) {
-	        serialized += processStyleName(styleName) + ':';
-	        serialized += dangerousStyleValue(styleName, styleValue) + ';';
-	      }
-	    }
-	    return serialized || null;
-	  },
-	
-	  /**
-	   * Sets the value for multiple styles on a node.  If a value is specified as
-	   * '' (empty string), the corresponding style property will be unset.
-	   *
-	   * @param {DOMElement} node
-	   * @param {object} styles
-	   */
-	  setValueForStyles: function(node, styles) {
-	    var style = node.style;
-	    for (var styleName in styles) {
-	      if (!styles.hasOwnProperty(styleName)) {
-	        continue;
-	      }
-	      var styleValue = dangerousStyleValue(styleName, styles[styleName]);
-	      if (styleValue) {
-	        style[styleName] = styleValue;
-	      } else {
-	        var expansion = CSSProperty.shorthandPropertyExpansions[styleName];
-	        if (expansion) {
-	          // Shorthand property that IE8 won't like unsetting, so unset each
-	          // component to placate it
-	          for (var individualStyleName in expansion) {
-	            style[individualStyleName] = '';
-	          }
-	        } else {
-	          style[styleName] = '';
-	        }
-	      }
-	    }
-	  }
-	
-	};
-	
-	module.exports = CSSPropertyOperations;
-
-
-/***/ },
-/* 81 */
-/*!***************************************************!*\
-  !*** ./~/react/lib/ReactBrowserComponentMixin.js ***!
-  \***************************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(process) {/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule ReactBrowserComponentMixin
-	 */
-	
-	"use strict";
-	
-	var ReactEmptyComponent = __webpack_require__(/*! ./ReactEmptyComponent */ 71);
-	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
-	
-	var invariant = __webpack_require__(/*! ./invariant */ 53);
-	
-	var ReactBrowserComponentMixin = {
-	  /**
-	   * Returns the DOM node rendered by this component.
-	   *
-	   * @return {DOMElement} The root node of this component.
-	   * @final
-	   * @protected
-	   */
-	  getDOMNode: function() {
-	    ("production" !== process.env.NODE_ENV ? invariant(
-	      this.isMounted(),
-	      'getDOMNode(): A component must be mounted to have a DOM node.'
-	    ) : invariant(this.isMounted()));
-	    if (ReactEmptyComponent.isNullComponentID(this._rootNodeID)) {
-	      return null;
-	    }
-	    return ReactMount.getNode(this._rootNodeID);
-	  }
-	};
-	
-	module.exports = ReactBrowserComponentMixin;
-	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
-
-/***/ },
-/* 82 */
 /*!***********************************************!*\
   !*** ./~/react/lib/BeforeInputEventPlugin.js ***!
   \***********************************************/
@@ -12379,7 +12217,7 @@
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
 	var EventPropagators = __webpack_require__(/*! ./EventPropagators */ 59);
 	var ExecutionEnvironment = __webpack_require__(/*! ./ExecutionEnvironment */ 44);
-	var SyntheticInputEvent = __webpack_require__(/*! ./SyntheticInputEvent */ 133);
+	var SyntheticInputEvent = __webpack_require__(/*! ./SyntheticInputEvent */ 130);
 	
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
 	
@@ -12580,7 +12418,7 @@
 
 
 /***/ },
-/* 83 */
+/* 81 */
 /*!******************************************!*\
   !*** ./~/react/lib/ChangeEventPlugin.js ***!
   \******************************************/
@@ -12614,7 +12452,7 @@
 	var SyntheticEvent = __webpack_require__(/*! ./SyntheticEvent */ 62);
 	
 	var isEventSupported = __webpack_require__(/*! ./isEventSupported */ 120);
-	var isTextInputElement = __webpack_require__(/*! ./isTextInputElement */ 134);
+	var isTextInputElement = __webpack_require__(/*! ./isTextInputElement */ 131);
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
 	
 	var topLevelTypes = EventConstants.topLevelTypes;
@@ -12976,7 +12814,7 @@
 
 
 /***/ },
-/* 84 */
+/* 82 */
 /*!*********************************************!*\
   !*** ./~/react/lib/ClientReactRootIndex.js ***!
   \*********************************************/
@@ -13015,7 +12853,7 @@
 
 
 /***/ },
-/* 85 */
+/* 83 */
 /*!***********************************************!*\
   !*** ./~/react/lib/CompositionEventPlugin.js ***!
   \***********************************************/
@@ -13045,10 +12883,10 @@
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
 	var EventPropagators = __webpack_require__(/*! ./EventPropagators */ 59);
 	var ExecutionEnvironment = __webpack_require__(/*! ./ExecutionEnvironment */ 44);
-	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 135);
-	var SyntheticCompositionEvent = __webpack_require__(/*! ./SyntheticCompositionEvent */ 136);
+	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 132);
+	var SyntheticCompositionEvent = __webpack_require__(/*! ./SyntheticCompositionEvent */ 133);
 	
-	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 137);
+	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 134);
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
 	
 	var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
@@ -13288,7 +13126,7 @@
 
 
 /***/ },
-/* 86 */
+/* 84 */
 /*!************************************************!*\
   !*** ./~/react/lib/DefaultEventPluginOrder.js ***!
   \************************************************/
@@ -13342,7 +13180,7 @@
 
 
 /***/ },
-/* 87 */
+/* 85 */
 /*!**********************************************!*\
   !*** ./~/react/lib/EnterLeaveEventPlugin.js ***!
   \**********************************************/
@@ -13371,7 +13209,7 @@
 	
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
 	var EventPropagators = __webpack_require__(/*! ./EventPropagators */ 59);
-	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 138);
+	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 135);
 	
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
@@ -13496,7 +13334,7 @@
 
 
 /***/ },
-/* 88 */
+/* 86 */
 /*!**********************************************!*\
   !*** ./~/react/lib/HTMLDOMPropertyConfig.js ***!
   \**********************************************/
@@ -13694,7 +13532,7 @@
 
 
 /***/ },
-/* 89 */
+/* 87 */
 /*!*****************************************************!*\
   !*** ./~/react/lib/MobileSafariClickEventPlugin.js ***!
   \*****************************************************/
@@ -13766,7 +13604,63 @@
 
 
 /***/ },
-/* 90 */
+/* 88 */
+/*!***************************************************!*\
+  !*** ./~/react/lib/ReactBrowserComponentMixin.js ***!
+  \***************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule ReactBrowserComponentMixin
+	 */
+	
+	"use strict";
+	
+	var ReactEmptyComponent = __webpack_require__(/*! ./ReactEmptyComponent */ 71);
+	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
+	
+	var invariant = __webpack_require__(/*! ./invariant */ 53);
+	
+	var ReactBrowserComponentMixin = {
+	  /**
+	   * Returns the DOM node rendered by this component.
+	   *
+	   * @return {DOMElement} The root node of this component.
+	   * @final
+	   * @protected
+	   */
+	  getDOMNode: function() {
+	    ("production" !== process.env.NODE_ENV ? invariant(
+	      this.isMounted(),
+	      'getDOMNode(): A component must be mounted to have a DOM node.'
+	    ) : invariant(this.isMounted()));
+	    if (ReactEmptyComponent.isNullComponentID(this._rootNodeID)) {
+	      return null;
+	    }
+	    return ReactMount.getNode(this._rootNodeID);
+	  }
+	};
+	
+	module.exports = ReactBrowserComponentMixin;
+	
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
+
+/***/ },
+/* 89 */
 /*!*********************************************************!*\
   !*** ./~/react/lib/ReactComponentBrowserEnvironment.js ***!
   \*********************************************************/
@@ -13794,15 +13688,15 @@
 	
 	"use strict";
 	
-	var ReactDOMIDOperations = __webpack_require__(/*! ./ReactDOMIDOperations */ 139);
+	var ReactDOMIDOperations = __webpack_require__(/*! ./ReactDOMIDOperations */ 136);
 	var ReactMarkupChecksum = __webpack_require__(/*! ./ReactMarkupChecksum */ 111);
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
 	var ReactPerf = __webpack_require__(/*! ./ReactPerf */ 38);
-	var ReactReconcileTransaction = __webpack_require__(/*! ./ReactReconcileTransaction */ 140);
+	var ReactReconcileTransaction = __webpack_require__(/*! ./ReactReconcileTransaction */ 137);
 	
 	var getReactRootElementInContainer = __webpack_require__(/*! ./getReactRootElementInContainer */ 108);
 	var invariant = __webpack_require__(/*! ./invariant */ 53);
-	var setInnerHTML = __webpack_require__(/*! ./setInnerHTML */ 141);
+	var setInnerHTML = __webpack_require__(/*! ./setInnerHTML */ 138);
 	
 	
 	var ELEMENT_NODE_TYPE = 1;
@@ -13901,7 +13795,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 91 */
+/* 90 */
 /*!*****************************************************!*\
   !*** ./~/react/lib/ReactDefaultBatchingStrategy.js ***!
   \*****************************************************/
@@ -13985,7 +13879,7 @@
 
 
 /***/ },
-/* 92 */
+/* 91 */
 /*!***************************************!*\
   !*** ./~/react/lib/ReactDOMButton.js ***!
   \***************************************/
@@ -14011,8 +13905,8 @@
 	
 	"use strict";
 	
-	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 142);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 139);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14063,7 +13957,7 @@
 
 
 /***/ },
-/* 93 */
+/* 92 */
 /*!*************************************!*\
   !*** ./~/react/lib/ReactDOMForm.js ***!
   \*************************************/
@@ -14090,8 +13984,8 @@
 	"use strict";
 	
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
-	var LocalEventTrapMixin = __webpack_require__(/*! ./LocalEventTrapMixin */ 143);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var LocalEventTrapMixin = __webpack_require__(/*! ./LocalEventTrapMixin */ 140);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14126,7 +14020,7 @@
 
 
 /***/ },
-/* 94 */
+/* 93 */
 /*!************************************!*\
   !*** ./~/react/lib/ReactDOMImg.js ***!
   \************************************/
@@ -14153,8 +14047,8 @@
 	"use strict";
 	
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
-	var LocalEventTrapMixin = __webpack_require__(/*! ./LocalEventTrapMixin */ 143);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var LocalEventTrapMixin = __webpack_require__(/*! ./LocalEventTrapMixin */ 140);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14187,7 +14081,7 @@
 
 
 /***/ },
-/* 95 */
+/* 94 */
 /*!**************************************!*\
   !*** ./~/react/lib/ReactDOMInput.js ***!
   \**************************************/
@@ -14213,10 +14107,10 @@
 	
 	"use strict";
 	
-	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 142);
+	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 139);
 	var DOMPropertyOperations = __webpack_require__(/*! ./DOMPropertyOperations */ 24);
-	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 144);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 141);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
@@ -14379,7 +14273,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 96 */
+/* 95 */
 /*!***************************************!*\
   !*** ./~/react/lib/ReactDOMOption.js ***!
   \***************************************/
@@ -14405,7 +14299,7 @@
 	
 	"use strict";
 	
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14444,7 +14338,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 97 */
+/* 96 */
 /*!***************************************!*\
   !*** ./~/react/lib/ReactDOMSelect.js ***!
   \***************************************/
@@ -14470,9 +14364,9 @@
 	
 	"use strict";
 	
-	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 142);
-	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 144);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 139);
+	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 141);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14634,7 +14528,7 @@
 
 
 /***/ },
-/* 98 */
+/* 97 */
 /*!*****************************************!*\
   !*** ./~/react/lib/ReactDOMTextarea.js ***!
   \*****************************************/
@@ -14660,10 +14554,10 @@
 	
 	"use strict";
 	
-	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 142);
+	var AutoFocusMixin = __webpack_require__(/*! ./AutoFocusMixin */ 139);
 	var DOMPropertyOperations = __webpack_require__(/*! ./DOMPropertyOperations */ 24);
-	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 144);
-	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 81);
+	var LinkedValueUtils = __webpack_require__(/*! ./LinkedValueUtils */ 141);
+	var ReactBrowserComponentMixin = __webpack_require__(/*! ./ReactBrowserComponentMixin */ 88);
 	var ReactCompositeComponent = __webpack_require__(/*! ./ReactCompositeComponent */ 28);
 	var ReactDOM = __webpack_require__(/*! ./ReactDOM */ 32);
 	
@@ -14786,7 +14680,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 99 */
+/* 98 */
 /*!*******************************************!*\
   !*** ./~/react/lib/ReactEventListener.js ***!
   \*******************************************/
@@ -14813,7 +14707,7 @@
 	
 	"use strict";
 	
-	var EventListener = __webpack_require__(/*! ./EventListener */ 145);
+	var EventListener = __webpack_require__(/*! ./EventListener */ 142);
 	var ExecutionEnvironment = __webpack_require__(/*! ./ExecutionEnvironment */ 44);
 	var PooledClass = __webpack_require__(/*! ./PooledClass */ 66);
 	var ReactInstanceHandles = __webpack_require__(/*! ./ReactInstanceHandles */ 35);
@@ -14821,7 +14715,7 @@
 	var ReactUpdates = __webpack_require__(/*! ./ReactUpdates */ 61);
 	
 	var getEventTarget = __webpack_require__(/*! ./getEventTarget */ 125);
-	var getUnboundedScrollPosition = __webpack_require__(/*! ./getUnboundedScrollPosition */ 146);
+	var getUnboundedScrollPosition = __webpack_require__(/*! ./getUnboundedScrollPosition */ 143);
 	var mixInto = __webpack_require__(/*! ./mixInto */ 76);
 	
 	/**
@@ -14984,7 +14878,7 @@
 
 
 /***/ },
-/* 100 */
+/* 99 */
 /*!***************************************!*\
   !*** ./~/react/lib/ReactInjection.js ***!
   \***************************************/
@@ -15038,7 +14932,7 @@
 
 
 /***/ },
-/* 101 */
+/* 100 */
 /*!******************************************!*\
   !*** ./~/react/lib/SelectEventPlugin.js ***!
   \******************************************/
@@ -15066,11 +14960,11 @@
 	
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
 	var EventPropagators = __webpack_require__(/*! ./EventPropagators */ 59);
-	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 135);
+	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 132);
 	var SyntheticEvent = __webpack_require__(/*! ./SyntheticEvent */ 62);
 	
-	var getActiveElement = __webpack_require__(/*! ./getActiveElement */ 147);
-	var isTextInputElement = __webpack_require__(/*! ./isTextInputElement */ 134);
+	var getActiveElement = __webpack_require__(/*! ./getActiveElement */ 144);
+	var isTextInputElement = __webpack_require__(/*! ./isTextInputElement */ 131);
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
 	var shallowEqual = __webpack_require__(/*! ./shallowEqual */ 45);
 	
@@ -15247,7 +15141,7 @@
 
 
 /***/ },
-/* 102 */
+/* 101 */
 /*!*********************************************!*\
   !*** ./~/react/lib/ServerReactRootIndex.js ***!
   \*********************************************/
@@ -15292,7 +15186,7 @@
 
 
 /***/ },
-/* 103 */
+/* 102 */
 /*!******************************************!*\
   !*** ./~/react/lib/SimpleEventPlugin.js ***!
   \******************************************/
@@ -15321,15 +15215,15 @@
 	var EventConstants = __webpack_require__(/*! ./EventConstants */ 57);
 	var EventPluginUtils = __webpack_require__(/*! ./EventPluginUtils */ 25);
 	var EventPropagators = __webpack_require__(/*! ./EventPropagators */ 59);
-	var SyntheticClipboardEvent = __webpack_require__(/*! ./SyntheticClipboardEvent */ 148);
+	var SyntheticClipboardEvent = __webpack_require__(/*! ./SyntheticClipboardEvent */ 145);
 	var SyntheticEvent = __webpack_require__(/*! ./SyntheticEvent */ 62);
-	var SyntheticFocusEvent = __webpack_require__(/*! ./SyntheticFocusEvent */ 149);
-	var SyntheticKeyboardEvent = __webpack_require__(/*! ./SyntheticKeyboardEvent */ 150);
-	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 138);
-	var SyntheticDragEvent = __webpack_require__(/*! ./SyntheticDragEvent */ 151);
-	var SyntheticTouchEvent = __webpack_require__(/*! ./SyntheticTouchEvent */ 152);
-	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 153);
-	var SyntheticWheelEvent = __webpack_require__(/*! ./SyntheticWheelEvent */ 154);
+	var SyntheticFocusEvent = __webpack_require__(/*! ./SyntheticFocusEvent */ 146);
+	var SyntheticKeyboardEvent = __webpack_require__(/*! ./SyntheticKeyboardEvent */ 147);
+	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 135);
+	var SyntheticDragEvent = __webpack_require__(/*! ./SyntheticDragEvent */ 148);
+	var SyntheticTouchEvent = __webpack_require__(/*! ./SyntheticTouchEvent */ 149);
+	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 150);
+	var SyntheticWheelEvent = __webpack_require__(/*! ./SyntheticWheelEvent */ 151);
 	
 	var invariant = __webpack_require__(/*! ./invariant */ 53);
 	var keyOf = __webpack_require__(/*! ./keyOf */ 51);
@@ -15721,7 +15615,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 104 */
+/* 103 */
 /*!*********************************************!*\
   !*** ./~/react/lib/SVGDOMPropertyConfig.js ***!
   \*********************************************/
@@ -15827,7 +15721,7 @@
 
 
 /***/ },
-/* 105 */
+/* 104 */
 /*!************************************************!*\
   !*** ./~/react/lib/createFullPageComponent.js ***!
   \************************************************/
@@ -15898,6 +15792,112 @@
 	module.exports = createFullPageComponent;
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
+
+/***/ },
+/* 105 */
+/*!**********************************************!*\
+  !*** ./~/react/lib/CSSPropertyOperations.js ***!
+  \**********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule CSSPropertyOperations
+	 * @typechecks static-only
+	 */
+	
+	"use strict";
+	
+	var CSSProperty = __webpack_require__(/*! ./CSSProperty */ 152);
+	
+	var dangerousStyleValue = __webpack_require__(/*! ./dangerousStyleValue */ 153);
+	var hyphenateStyleName = __webpack_require__(/*! ./hyphenateStyleName */ 154);
+	var memoizeStringOnly = __webpack_require__(/*! ./memoizeStringOnly */ 65);
+	
+	var processStyleName = memoizeStringOnly(function(styleName) {
+	  return hyphenateStyleName(styleName);
+	});
+	
+	/**
+	 * Operations for dealing with CSS properties.
+	 */
+	var CSSPropertyOperations = {
+	
+	  /**
+	   * Serializes a mapping of style properties for use as inline styles:
+	   *
+	   *   > createMarkupForStyles({width: '200px', height: 0})
+	   *   "width:200px;height:0;"
+	   *
+	   * Undefined values are ignored so that declarative programming is easier.
+	   * The result should be HTML-escaped before insertion into the DOM.
+	   *
+	   * @param {object} styles
+	   * @return {?string}
+	   */
+	  createMarkupForStyles: function(styles) {
+	    var serialized = '';
+	    for (var styleName in styles) {
+	      if (!styles.hasOwnProperty(styleName)) {
+	        continue;
+	      }
+	      var styleValue = styles[styleName];
+	      if (styleValue != null) {
+	        serialized += processStyleName(styleName) + ':';
+	        serialized += dangerousStyleValue(styleName, styleValue) + ';';
+	      }
+	    }
+	    return serialized || null;
+	  },
+	
+	  /**
+	   * Sets the value for multiple styles on a node.  If a value is specified as
+	   * '' (empty string), the corresponding style property will be unset.
+	   *
+	   * @param {DOMElement} node
+	   * @param {object} styles
+	   */
+	  setValueForStyles: function(node, styles) {
+	    var style = node.style;
+	    for (var styleName in styles) {
+	      if (!styles.hasOwnProperty(styleName)) {
+	        continue;
+	      }
+	      var styleValue = dangerousStyleValue(styleName, styles[styleName]);
+	      if (styleValue) {
+	        style[styleName] = styleValue;
+	      } else {
+	        var expansion = CSSProperty.shorthandPropertyExpansions[styleName];
+	        if (expansion) {
+	          // Shorthand property that IE8 won't like unsetting, so unset each
+	          // component to placate it
+	          for (var individualStyleName in expansion) {
+	            style[individualStyleName] = '';
+	          }
+	        } else {
+	          style[styleName] = '';
+	        }
+	      }
+	    }
+	  }
+	
+	};
+	
+	module.exports = CSSPropertyOperations;
+
 
 /***/ },
 /* 106 */
@@ -17270,7 +17270,7 @@
 	
 	"use strict";
 	
-	var getUnboundedScrollPosition = __webpack_require__(/*! ./getUnboundedScrollPosition */ 146);
+	var getUnboundedScrollPosition = __webpack_require__(/*! ./getUnboundedScrollPosition */ 143);
 	
 	var ViewportMetrics = {
 	
@@ -17899,263 +17899,6 @@
 
 /***/ },
 /* 130 */
-/*!************************************!*\
-  !*** ./~/react/lib/CSSProperty.js ***!
-  \************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule CSSProperty
-	 */
-	
-	"use strict";
-	
-	/**
-	 * CSS properties which accept numbers but are not in units of "px".
-	 */
-	var isUnitlessNumber = {
-	  columnCount: true,
-	  fillOpacity: true,
-	  flex: true,
-	  flexGrow: true,
-	  flexShrink: true,
-	  fontWeight: true,
-	  lineClamp: true,
-	  lineHeight: true,
-	  opacity: true,
-	  order: true,
-	  orphans: true,
-	  widows: true,
-	  zIndex: true,
-	  zoom: true
-	};
-	
-	/**
-	 * @param {string} prefix vendor-specific prefix, eg: Webkit
-	 * @param {string} key style name, eg: transitionDuration
-	 * @return {string} style name prefixed with `prefix`, properly camelCased, eg:
-	 * WebkitTransitionDuration
-	 */
-	function prefixKey(prefix, key) {
-	  return prefix + key.charAt(0).toUpperCase() + key.substring(1);
-	}
-	
-	/**
-	 * Support style names that may come passed in prefixed by adding permutations
-	 * of vendor prefixes.
-	 */
-	var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
-	
-	// Using Object.keys here, or else the vanilla for-in loop makes IE8 go into an
-	// infinite loop, because it iterates over the newly added props too.
-	Object.keys(isUnitlessNumber).forEach(function(prop) {
-	  prefixes.forEach(function(prefix) {
-	    isUnitlessNumber[prefixKey(prefix, prop)] = isUnitlessNumber[prop];
-	  });
-	});
-	
-	/**
-	 * Most style properties can be unset by doing .style[prop] = '' but IE8
-	 * doesn't like doing that with shorthand properties so for the properties that
-	 * IE8 breaks on, which are listed here, we instead unset each of the
-	 * individual properties. See http://bugs.jquery.com/ticket/12385.
-	 * The 4-value 'clock' properties like margin, padding, border-width seem to
-	 * behave without any problems. Curiously, list-style works too without any
-	 * special prodding.
-	 */
-	var shorthandPropertyExpansions = {
-	  background: {
-	    backgroundImage: true,
-	    backgroundPosition: true,
-	    backgroundRepeat: true,
-	    backgroundColor: true
-	  },
-	  border: {
-	    borderWidth: true,
-	    borderStyle: true,
-	    borderColor: true
-	  },
-	  borderBottom: {
-	    borderBottomWidth: true,
-	    borderBottomStyle: true,
-	    borderBottomColor: true
-	  },
-	  borderLeft: {
-	    borderLeftWidth: true,
-	    borderLeftStyle: true,
-	    borderLeftColor: true
-	  },
-	  borderRight: {
-	    borderRightWidth: true,
-	    borderRightStyle: true,
-	    borderRightColor: true
-	  },
-	  borderTop: {
-	    borderTopWidth: true,
-	    borderTopStyle: true,
-	    borderTopColor: true
-	  },
-	  font: {
-	    fontStyle: true,
-	    fontVariant: true,
-	    fontWeight: true,
-	    fontSize: true,
-	    lineHeight: true,
-	    fontFamily: true
-	  }
-	};
-	
-	var CSSProperty = {
-	  isUnitlessNumber: isUnitlessNumber,
-	  shorthandPropertyExpansions: shorthandPropertyExpansions
-	};
-	
-	module.exports = CSSProperty;
-
-
-/***/ },
-/* 131 */
-/*!********************************************!*\
-  !*** ./~/react/lib/dangerousStyleValue.js ***!
-  \********************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule dangerousStyleValue
-	 * @typechecks static-only
-	 */
-	
-	"use strict";
-	
-	var CSSProperty = __webpack_require__(/*! ./CSSProperty */ 130);
-	
-	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
-	
-	/**
-	 * Convert a value into the proper css writable value. The style name `name`
-	 * should be logical (no hyphens), as specified
-	 * in `CSSProperty.isUnitlessNumber`.
-	 *
-	 * @param {string} name CSS property name such as `topMargin`.
-	 * @param {*} value CSS property value such as `10px`.
-	 * @return {string} Normalized style value with dimensions applied.
-	 */
-	function dangerousStyleValue(name, value) {
-	  // Note that we've removed escapeTextForBrowser() calls here since the
-	  // whole string will be escaped when the attribute is injected into
-	  // the markup. If you provide unsafe user data here they can inject
-	  // arbitrary CSS which may be problematic (I couldn't repro this):
-	  // https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
-	  // http://www.thespanner.co.uk/2007/11/26/ultimate-xss-css-injection/
-	  // This is not an XSS hole but instead a potential CSS injection issue
-	  // which has lead to a greater discussion about how we're going to
-	  // trust URLs moving forward. See #2115901
-	
-	  var isEmpty = value == null || typeof value === 'boolean' || value === '';
-	  if (isEmpty) {
-	    return '';
-	  }
-	
-	  var isNonNumeric = isNaN(value);
-	  if (isNonNumeric || value === 0 ||
-	      isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name]) {
-	    return '' + value; // cast to string
-	  }
-	
-	  if (typeof value === 'string') {
-	    value = value.trim();
-	  }
-	  return value + 'px';
-	}
-	
-	module.exports = dangerousStyleValue;
-
-
-/***/ },
-/* 132 */
-/*!*******************************************!*\
-  !*** ./~/react/lib/hyphenateStyleName.js ***!
-  \*******************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule hyphenateStyleName
-	 * @typechecks
-	 */
-	
-	"use strict";
-	
-	var hyphenate = __webpack_require__(/*! ./hyphenate */ 159);
-	
-	var msPattern = /^ms-/;
-	
-	/**
-	 * Hyphenates a camelcased CSS property name, for example:
-	 *
-	 *   > hyphenate('backgroundColor')
-	 *   < "background-color"
-	 *   > hyphenate('MozTransition')
-	 *   < "-moz-transition"
-	 *   > hyphenate('msTransition')
-	 *   < "-ms-transition"
-	 *
-	 * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
-	 * is converted to `-ms-`.
-	 *
-	 * @param {string} string
-	 * @return {string}
-	 */
-	function hyphenateStyleName(string) {
-	  return hyphenate(string).replace(msPattern, '-ms-');
-	}
-	
-	module.exports = hyphenateStyleName;
-
-
-/***/ },
-/* 133 */
 /*!********************************************!*\
   !*** ./~/react/lib/SyntheticInputEvent.js ***!
   \********************************************/
@@ -18216,7 +17959,7 @@
 
 
 /***/ },
-/* 134 */
+/* 131 */
 /*!*******************************************!*\
   !*** ./~/react/lib/isTextInputElement.js ***!
   \*******************************************/
@@ -18274,7 +18017,7 @@
 
 
 /***/ },
-/* 135 */
+/* 132 */
 /*!********************************************!*\
   !*** ./~/react/lib/ReactInputSelection.js ***!
   \********************************************/
@@ -18300,11 +18043,11 @@
 	
 	"use strict";
 	
-	var ReactDOMSelection = __webpack_require__(/*! ./ReactDOMSelection */ 160);
+	var ReactDOMSelection = __webpack_require__(/*! ./ReactDOMSelection */ 159);
 	
 	var containsNode = __webpack_require__(/*! ./containsNode */ 107);
-	var focusNode = __webpack_require__(/*! ./focusNode */ 161);
-	var getActiveElement = __webpack_require__(/*! ./getActiveElement */ 147);
+	var focusNode = __webpack_require__(/*! ./focusNode */ 160);
+	var getActiveElement = __webpack_require__(/*! ./getActiveElement */ 144);
 	
 	function isInDocument(node) {
 	  return containsNode(document.documentElement, node);
@@ -18424,7 +18167,7 @@
 
 
 /***/ },
-/* 136 */
+/* 133 */
 /*!**************************************************!*\
   !*** ./~/react/lib/SyntheticCompositionEvent.js ***!
   \**************************************************/
@@ -18484,7 +18227,7 @@
 
 
 /***/ },
-/* 137 */
+/* 134 */
 /*!***********************************************!*\
   !*** ./~/react/lib/getTextContentAccessor.js ***!
   \***********************************************/
@@ -18535,7 +18278,7 @@
 
 
 /***/ },
-/* 138 */
+/* 135 */
 /*!********************************************!*\
   !*** ./~/react/lib/SyntheticMouseEvent.js ***!
   \********************************************/
@@ -18562,10 +18305,10 @@
 	
 	"use strict";
 	
-	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 153);
+	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 150);
 	var ViewportMetrics = __webpack_require__(/*! ./ViewportMetrics */ 122);
 	
-	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 162);
+	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 161);
 	
 	/**
 	 * @interface MouseEvent
@@ -18632,7 +18375,7 @@
 
 
 /***/ },
-/* 139 */
+/* 136 */
 /*!*********************************************!*\
   !*** ./~/react/lib/ReactDOMIDOperations.js ***!
   \*********************************************/
@@ -18661,14 +18404,14 @@
 	
 	"use strict";
 	
-	var CSSPropertyOperations = __webpack_require__(/*! ./CSSPropertyOperations */ 80);
-	var DOMChildrenOperations = __webpack_require__(/*! ./DOMChildrenOperations */ 163);
+	var CSSPropertyOperations = __webpack_require__(/*! ./CSSPropertyOperations */ 105);
+	var DOMChildrenOperations = __webpack_require__(/*! ./DOMChildrenOperations */ 162);
 	var DOMPropertyOperations = __webpack_require__(/*! ./DOMPropertyOperations */ 24);
 	var ReactMount = __webpack_require__(/*! ./ReactMount */ 36);
 	var ReactPerf = __webpack_require__(/*! ./ReactPerf */ 38);
 	
 	var invariant = __webpack_require__(/*! ./invariant */ 53);
-	var setInnerHTML = __webpack_require__(/*! ./setInnerHTML */ 141);
+	var setInnerHTML = __webpack_require__(/*! ./setInnerHTML */ 138);
 	
 	/**
 	 * Errors for properties that should not be updated with `updatePropertyById()`.
@@ -18831,7 +18574,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 140 */
+/* 137 */
 /*!**************************************************!*\
   !*** ./~/react/lib/ReactReconcileTransaction.js ***!
   \**************************************************/
@@ -18861,7 +18604,7 @@
 	var CallbackQueue = __webpack_require__(/*! ./CallbackQueue */ 123);
 	var PooledClass = __webpack_require__(/*! ./PooledClass */ 66);
 	var ReactBrowserEventEmitter = __webpack_require__(/*! ./ReactBrowserEventEmitter */ 60);
-	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 135);
+	var ReactInputSelection = __webpack_require__(/*! ./ReactInputSelection */ 132);
 	var ReactPutListenerQueue = __webpack_require__(/*! ./ReactPutListenerQueue */ 157);
 	var Transaction = __webpack_require__(/*! ./Transaction */ 124);
 	
@@ -19022,7 +18765,7 @@
 
 
 /***/ },
-/* 141 */
+/* 138 */
 /*!*************************************!*\
   !*** ./~/react/lib/setInnerHTML.js ***!
   \*************************************/
@@ -19116,7 +18859,7 @@
 
 
 /***/ },
-/* 142 */
+/* 139 */
 /*!***************************************!*\
   !*** ./~/react/lib/AutoFocusMixin.js ***!
   \***************************************/
@@ -19143,7 +18886,7 @@
 	
 	"use strict";
 	
-	var focusNode = __webpack_require__(/*! ./focusNode */ 161);
+	var focusNode = __webpack_require__(/*! ./focusNode */ 160);
 	
 	var AutoFocusMixin = {
 	  componentDidMount: function() {
@@ -19157,7 +18900,7 @@
 
 
 /***/ },
-/* 143 */
+/* 140 */
 /*!********************************************!*\
   !*** ./~/react/lib/LocalEventTrapMixin.js ***!
   \********************************************/
@@ -19219,7 +18962,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 144 */
+/* 141 */
 /*!*****************************************!*\
   !*** ./~/react/lib/LinkedValueUtils.js ***!
   \*****************************************/
@@ -19388,7 +19131,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 145 */
+/* 142 */
 /*!**************************************!*\
   !*** ./~/react/lib/EventListener.js ***!
   \**************************************/
@@ -19470,7 +19213,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 146 */
+/* 143 */
 /*!***************************************************!*\
   !*** ./~/react/lib/getUnboundedScrollPosition.js ***!
   \***************************************************/
@@ -19524,7 +19267,7 @@
 
 
 /***/ },
-/* 147 */
+/* 144 */
 /*!*****************************************!*\
   !*** ./~/react/lib/getActiveElement.js ***!
   \*****************************************/
@@ -19567,7 +19310,7 @@
 
 
 /***/ },
-/* 148 */
+/* 145 */
 /*!************************************************!*\
   !*** ./~/react/lib/SyntheticClipboardEvent.js ***!
   \************************************************/
@@ -19627,7 +19370,7 @@
 
 
 /***/ },
-/* 149 */
+/* 146 */
 /*!********************************************!*\
   !*** ./~/react/lib/SyntheticFocusEvent.js ***!
   \********************************************/
@@ -19654,7 +19397,7 @@
 	
 	"use strict";
 	
-	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 153);
+	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 150);
 	
 	/**
 	 * @interface FocusEvent
@@ -19680,7 +19423,7 @@
 
 
 /***/ },
-/* 150 */
+/* 147 */
 /*!***********************************************!*\
   !*** ./~/react/lib/SyntheticKeyboardEvent.js ***!
   \***********************************************/
@@ -19707,10 +19450,10 @@
 	
 	"use strict";
 	
-	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 153);
+	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 150);
 	
-	var getEventKey = __webpack_require__(/*! ./getEventKey */ 164);
-	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 162);
+	var getEventKey = __webpack_require__(/*! ./getEventKey */ 163);
+	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 161);
 	
 	/**
 	 * @interface KeyboardEvent
@@ -19776,7 +19519,7 @@
 
 
 /***/ },
-/* 151 */
+/* 148 */
 /*!*******************************************!*\
   !*** ./~/react/lib/SyntheticDragEvent.js ***!
   \*******************************************/
@@ -19803,7 +19546,7 @@
 	
 	"use strict";
 	
-	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 138);
+	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 135);
 	
 	/**
 	 * @interface DragEvent
@@ -19829,7 +19572,7 @@
 
 
 /***/ },
-/* 152 */
+/* 149 */
 /*!********************************************!*\
   !*** ./~/react/lib/SyntheticTouchEvent.js ***!
   \********************************************/
@@ -19856,9 +19599,9 @@
 	
 	"use strict";
 	
-	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 153);
+	var SyntheticUIEvent = __webpack_require__(/*! ./SyntheticUIEvent */ 150);
 	
-	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 162);
+	var getEventModifierState = __webpack_require__(/*! ./getEventModifierState */ 161);
 	
 	/**
 	 * @interface TouchEvent
@@ -19891,7 +19634,7 @@
 
 
 /***/ },
-/* 153 */
+/* 150 */
 /*!*****************************************!*\
   !*** ./~/react/lib/SyntheticUIEvent.js ***!
   \*****************************************/
@@ -19967,7 +19710,7 @@
 
 
 /***/ },
-/* 154 */
+/* 151 */
 /*!********************************************!*\
   !*** ./~/react/lib/SyntheticWheelEvent.js ***!
   \********************************************/
@@ -19994,7 +19737,7 @@
 	
 	"use strict";
 	
-	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 138);
+	var SyntheticMouseEvent = __webpack_require__(/*! ./SyntheticMouseEvent */ 135);
 	
 	/**
 	 * @interface WheelEvent
@@ -20039,6 +19782,263 @@
 	SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 	
 	module.exports = SyntheticWheelEvent;
+
+
+/***/ },
+/* 152 */
+/*!************************************!*\
+  !*** ./~/react/lib/CSSProperty.js ***!
+  \************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule CSSProperty
+	 */
+	
+	"use strict";
+	
+	/**
+	 * CSS properties which accept numbers but are not in units of "px".
+	 */
+	var isUnitlessNumber = {
+	  columnCount: true,
+	  fillOpacity: true,
+	  flex: true,
+	  flexGrow: true,
+	  flexShrink: true,
+	  fontWeight: true,
+	  lineClamp: true,
+	  lineHeight: true,
+	  opacity: true,
+	  order: true,
+	  orphans: true,
+	  widows: true,
+	  zIndex: true,
+	  zoom: true
+	};
+	
+	/**
+	 * @param {string} prefix vendor-specific prefix, eg: Webkit
+	 * @param {string} key style name, eg: transitionDuration
+	 * @return {string} style name prefixed with `prefix`, properly camelCased, eg:
+	 * WebkitTransitionDuration
+	 */
+	function prefixKey(prefix, key) {
+	  return prefix + key.charAt(0).toUpperCase() + key.substring(1);
+	}
+	
+	/**
+	 * Support style names that may come passed in prefixed by adding permutations
+	 * of vendor prefixes.
+	 */
+	var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
+	
+	// Using Object.keys here, or else the vanilla for-in loop makes IE8 go into an
+	// infinite loop, because it iterates over the newly added props too.
+	Object.keys(isUnitlessNumber).forEach(function(prop) {
+	  prefixes.forEach(function(prefix) {
+	    isUnitlessNumber[prefixKey(prefix, prop)] = isUnitlessNumber[prop];
+	  });
+	});
+	
+	/**
+	 * Most style properties can be unset by doing .style[prop] = '' but IE8
+	 * doesn't like doing that with shorthand properties so for the properties that
+	 * IE8 breaks on, which are listed here, we instead unset each of the
+	 * individual properties. See http://bugs.jquery.com/ticket/12385.
+	 * The 4-value 'clock' properties like margin, padding, border-width seem to
+	 * behave without any problems. Curiously, list-style works too without any
+	 * special prodding.
+	 */
+	var shorthandPropertyExpansions = {
+	  background: {
+	    backgroundImage: true,
+	    backgroundPosition: true,
+	    backgroundRepeat: true,
+	    backgroundColor: true
+	  },
+	  border: {
+	    borderWidth: true,
+	    borderStyle: true,
+	    borderColor: true
+	  },
+	  borderBottom: {
+	    borderBottomWidth: true,
+	    borderBottomStyle: true,
+	    borderBottomColor: true
+	  },
+	  borderLeft: {
+	    borderLeftWidth: true,
+	    borderLeftStyle: true,
+	    borderLeftColor: true
+	  },
+	  borderRight: {
+	    borderRightWidth: true,
+	    borderRightStyle: true,
+	    borderRightColor: true
+	  },
+	  borderTop: {
+	    borderTopWidth: true,
+	    borderTopStyle: true,
+	    borderTopColor: true
+	  },
+	  font: {
+	    fontStyle: true,
+	    fontVariant: true,
+	    fontWeight: true,
+	    fontSize: true,
+	    lineHeight: true,
+	    fontFamily: true
+	  }
+	};
+	
+	var CSSProperty = {
+	  isUnitlessNumber: isUnitlessNumber,
+	  shorthandPropertyExpansions: shorthandPropertyExpansions
+	};
+	
+	module.exports = CSSProperty;
+
+
+/***/ },
+/* 153 */
+/*!********************************************!*\
+  !*** ./~/react/lib/dangerousStyleValue.js ***!
+  \********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule dangerousStyleValue
+	 * @typechecks static-only
+	 */
+	
+	"use strict";
+	
+	var CSSProperty = __webpack_require__(/*! ./CSSProperty */ 152);
+	
+	var isUnitlessNumber = CSSProperty.isUnitlessNumber;
+	
+	/**
+	 * Convert a value into the proper css writable value. The style name `name`
+	 * should be logical (no hyphens), as specified
+	 * in `CSSProperty.isUnitlessNumber`.
+	 *
+	 * @param {string} name CSS property name such as `topMargin`.
+	 * @param {*} value CSS property value such as `10px`.
+	 * @return {string} Normalized style value with dimensions applied.
+	 */
+	function dangerousStyleValue(name, value) {
+	  // Note that we've removed escapeTextForBrowser() calls here since the
+	  // whole string will be escaped when the attribute is injected into
+	  // the markup. If you provide unsafe user data here they can inject
+	  // arbitrary CSS which may be problematic (I couldn't repro this):
+	  // https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+	  // http://www.thespanner.co.uk/2007/11/26/ultimate-xss-css-injection/
+	  // This is not an XSS hole but instead a potential CSS injection issue
+	  // which has lead to a greater discussion about how we're going to
+	  // trust URLs moving forward. See #2115901
+	
+	  var isEmpty = value == null || typeof value === 'boolean' || value === '';
+	  if (isEmpty) {
+	    return '';
+	  }
+	
+	  var isNonNumeric = isNaN(value);
+	  if (isNonNumeric || value === 0 ||
+	      isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name]) {
+	    return '' + value; // cast to string
+	  }
+	
+	  if (typeof value === 'string') {
+	    value = value.trim();
+	  }
+	  return value + 'px';
+	}
+	
+	module.exports = dangerousStyleValue;
+
+
+/***/ },
+/* 154 */
+/*!*******************************************!*\
+  !*** ./~/react/lib/hyphenateStyleName.js ***!
+  \*******************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule hyphenateStyleName
+	 * @typechecks
+	 */
+	
+	"use strict";
+	
+	var hyphenate = __webpack_require__(/*! ./hyphenate */ 164);
+	
+	var msPattern = /^ms-/;
+	
+	/**
+	 * Hyphenates a camelcased CSS property name, for example:
+	 *
+	 *   > hyphenate('backgroundColor')
+	 *   < "background-color"
+	 *   > hyphenate('MozTransition')
+	 *   < "-moz-transition"
+	 *   > hyphenate('msTransition')
+	 *   < "-ms-transition"
+	 *
+	 * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+	 * is converted to `-ms-`.
+	 *
+	 * @param {string} string
+	 * @return {string}
+	 */
+	function hyphenateStyleName(string) {
+	  return hyphenate(string).replace(msPattern, '-ms-');
+	}
+	
+	module.exports = hyphenateStyleName;
 
 
 /***/ },
@@ -20201,53 +20201,6 @@
 /***/ },
 /* 158 */,
 /* 159 */
-/*!**********************************!*\
-  !*** ./~/react/lib/hyphenate.js ***!
-  \**********************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * Copyright 2013-2014 Facebook, Inc.
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 *
-	 * Unless required by applicable law or agreed to in writing, software
-	 * distributed under the License is distributed on an "AS IS" BASIS,
-	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	 * See the License for the specific language governing permissions and
-	 * limitations under the License.
-	 *
-	 * @providesModule hyphenate
-	 * @typechecks
-	 */
-	
-	var _uppercasePattern = /([A-Z])/g;
-	
-	/**
-	 * Hyphenates a camelcased string, for example:
-	 *
-	 *   > hyphenate('backgroundColor')
-	 *   < "background-color"
-	 *
-	 * For CSS style names, use `hyphenateStyleName` instead which works properly
-	 * with all vendor prefixes, including `ms`.
-	 *
-	 * @param {string} string
-	 * @return {string}
-	 */
-	function hyphenate(string) {
-	  return string.replace(_uppercasePattern, '-$1').toLowerCase();
-	}
-	
-	module.exports = hyphenate;
-
-
-/***/ },
-/* 160 */
 /*!******************************************!*\
   !*** ./~/react/lib/ReactDOMSelection.js ***!
   \******************************************/
@@ -20276,7 +20229,7 @@
 	var ExecutionEnvironment = __webpack_require__(/*! ./ExecutionEnvironment */ 44);
 	
 	var getNodeForCharacterOffset = __webpack_require__(/*! ./getNodeForCharacterOffset */ 167);
-	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 137);
+	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 134);
 	
 	/**
 	 * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -20470,7 +20423,7 @@
 
 
 /***/ },
-/* 161 */
+/* 160 */
 /*!**********************************!*\
   !*** ./~/react/lib/focusNode.js ***!
   \**********************************/
@@ -20512,7 +20465,7 @@
 
 
 /***/ },
-/* 162 */
+/* 161 */
 /*!**********************************************!*\
   !*** ./~/react/lib/getEventModifierState.js ***!
   \**********************************************/
@@ -20573,7 +20526,7 @@
 
 
 /***/ },
-/* 163 */
+/* 162 */
 /*!**********************************************!*\
   !*** ./~/react/lib/DOMChildrenOperations.js ***!
   \**********************************************/
@@ -20603,7 +20556,7 @@
 	var Danger = __webpack_require__(/*! ./Danger */ 168);
 	var ReactMultiChildUpdateTypes = __webpack_require__(/*! ./ReactMultiChildUpdateTypes */ 109);
 	
-	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 137);
+	var getTextContentAccessor = __webpack_require__(/*! ./getTextContentAccessor */ 134);
 	var invariant = __webpack_require__(/*! ./invariant */ 53);
 	
 	/**
@@ -20761,7 +20714,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
 
 /***/ },
-/* 164 */
+/* 163 */
 /*!************************************!*\
   !*** ./~/react/lib/getEventKey.js ***!
   \************************************/
@@ -20884,6 +20837,53 @@
 	module.exports = getEventKey;
 	
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
+
+/***/ },
+/* 164 */
+/*!**********************************!*\
+  !*** ./~/react/lib/hyphenate.js ***!
+  \**********************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2014 Facebook, Inc.
+	 *
+	 * Licensed under the Apache License, Version 2.0 (the "License");
+	 * you may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 *
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 *
+	 * Unless required by applicable law or agreed to in writing, software
+	 * distributed under the License is distributed on an "AS IS" BASIS,
+	 * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	 * See the License for the specific language governing permissions and
+	 * limitations under the License.
+	 *
+	 * @providesModule hyphenate
+	 * @typechecks
+	 */
+	
+	var _uppercasePattern = /([A-Z])/g;
+	
+	/**
+	 * Hyphenates a camelcased string, for example:
+	 *
+	 *   > hyphenate('backgroundColor')
+	 *   < "background-color"
+	 *
+	 * For CSS style names, use `hyphenateStyleName` instead which works properly
+	 * with all vendor prefixes, including `ms`.
+	 *
+	 * @param {string} string
+	 * @return {string}
+	 */
+	function hyphenate(string) {
+	  return string.replace(_uppercasePattern, '-$1').toLowerCase();
+	}
+	
+	module.exports = hyphenate;
+
 
 /***/ },
 /* 165 */

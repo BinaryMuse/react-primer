@@ -16,7 +16,8 @@ webpackJsonp([5],{
 	// to solve this problem.
 	
 	// A mixin is simply an object that defines certain component
-	// lifecycle hooks and properties.
+	// lifecycle hooks and properties. Here's a mixin we'll use
+	// to reimplement the Timer demo.
 	var SetIntervalMixin = {
 	  // Many lifecycle hooks are automatically merged with the
 	  // same hook defined in other mixins or the component itself.

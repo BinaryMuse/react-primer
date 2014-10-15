@@ -78,6 +78,12 @@ switch (demo) {
       showDemoLink(demo);
     });
     break;
+  case 7:
+    require.ensure([], function() {
+      require("./demo7/demo7.jsx");
+      showDemoLink(demo);
+    });
+    break;
   default:
     loadIndex();
 }
@@ -96,7 +102,8 @@ function loadIndex() {
         "State",
         "Composition, PropTypes, & Event Handlers",
         "Mixins",
-        "Top-Down Data Flow & shouldComponentUpdate"
+        "Top-Down Data Flow & shouldComponentUpdate",
+        "Wrapping Children with this.props.children"
       ];
       return (
         <ul>

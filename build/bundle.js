@@ -51,37 +51,43 @@ webpackJsonp([0],[
 	switch (demo) {
 	  case 1:
 	    __webpack_require__.e/*nsure*/(1, function() {
-	      __webpack_require__(/*! ./demo1/demo1.jsx */ 3);
+	      __webpack_require__(/*! ./demo1/demo1.jsx */ 2);
 	      showDemoLink(demo);
 	    });
 	    break;
 	  case 2:
 	    __webpack_require__.e/*nsure*/(2, function() {
-	      __webpack_require__(/*! ./demo2/demo2.jsx */ 4);
+	      __webpack_require__(/*! ./demo2/demo2.jsx */ 3);
 	      showDemoLink(demo);
 	    });
 	    break;
 	  case 3:
 	    __webpack_require__.e/*nsure*/(3, function() {
-	      __webpack_require__(/*! ./demo3/demo3.jsx */ 5);
+	      __webpack_require__(/*! ./demo3/demo3.jsx */ 4);
 	      showDemoLink(demo);
 	    });
 	    break;
 	  case 4:
 	    __webpack_require__.e/*nsure*/(4, function() {
-	      __webpack_require__(/*! ./demo4/demo4.jsx */ 6);
+	      __webpack_require__(/*! ./demo4/demo4.jsx */ 5);
 	      showDemoLink(demo);
 	    });
 	    break;
 	  case 5:
 	    __webpack_require__.e/*nsure*/(5, function() {
-	      __webpack_require__(/*! ./demo5/demo5.jsx */ 7);
+	      __webpack_require__(/*! ./demo5/demo5.jsx */ 6);
 	      showDemoLink(demo);
 	    });
 	    break;
 	  case 6:
 	    __webpack_require__.e/*nsure*/(6, function() {
-	      __webpack_require__(/*! ./demo6/demo6.jsx */ 8);
+	      __webpack_require__(/*! ./demo6/demo6.jsx */ 7);
+	      showDemoLink(demo);
+	    });
+	    break;
+	  case 7:
+	    __webpack_require__.e/*nsure*/(7, function() {
+	      __webpack_require__(/*! ./demo7/demo7.jsx */ 8);
 	      showDemoLink(demo);
 	    });
 	    break;
@@ -103,7 +109,8 @@ webpackJsonp([0],[
 	        "State",
 	        "Composition, PropTypes, & Event Handlers",
 	        "Mixins",
-	        "Top-Down Data Flow & shouldComponentUpdate"
+	        "Top-Down Data Flow & shouldComponentUpdate",
+	        "Wrapping Children with this.props.children"
 	      ];
 	      return (
 	        React.DOM.ul(null, 

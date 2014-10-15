@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 8:
+/***/ 7:
 /*!*************************!*\
   !*** ./demo6/demo6.jsx ***!
   \*************************/
@@ -9,8 +9,8 @@ webpackJsonp([6],{
 	/** @jsx React.DOM */
 	
 	var React = __webpack_require__(/*! react */ 1),
-	    Store = __webpack_require__(/*! ./store.jsx */ 19),
-	    Item = __webpack_require__(/*! ./item.jsx */ 20);
+	    Store = __webpack_require__(/*! ./store.jsx */ 20),
+	    Item = __webpack_require__(/*! ./item.jsx */ 21);
 	
 	// This demo introduces the idea of a top-level data store
 	// that the main application uses to get state from;
@@ -120,14 +120,14 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 19:
+/***/ 20:
 /*!*************************!*\
   !*** ./demo6/store.jsx ***!
   \*************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var EventEmitter = __webpack_require__(/*! events */ 127).EventEmitter,
-	    util = __webpack_require__(/*! util */ 128);
+	var EventEmitter = __webpack_require__(/*! events */ 65).EventEmitter,
+	    util = __webpack_require__(/*! util */ 66);
 	
 	var id = 1;
 	
@@ -173,7 +173,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 20:
+/***/ 21:
 /*!************************!*\
   !*** ./demo6/item.jsx ***!
   \************************/
@@ -286,7 +286,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 127:
+/***/ 65:
 /*!********************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/events/events.js ***!
   \********************************************************/
@@ -597,7 +597,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 128:
+/***/ 66:
 /*!****************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/util.js ***!
   \****************************************************/
@@ -1128,7 +1128,7 @@ webpackJsonp([6],{
 	}
 	exports.isPrimitive = isPrimitive;
 	
-	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 158);
+	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 159);
 	
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -1172,7 +1172,7 @@ webpackJsonp([6],{
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(/*! inherits */ 166);
+	exports.inherits = __webpack_require__(/*! inherits */ 167);
 	
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -1190,11 +1190,11 @@ webpackJsonp([6],{
 	  return Object.prototype.hasOwnProperty.call(obj, prop);
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 21)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 22)))
 
 /***/ },
 
-/***/ 158:
+/***/ 159:
 /*!***********************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/support/isBufferBrowser.js ***!
   \***********************************************************************/
@@ -1209,7 +1209,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 166:
+/***/ 167:
 /*!***************************************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/~/inherits/inherits_browser.js ***!
   \***************************************************************************/

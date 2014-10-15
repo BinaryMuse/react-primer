@@ -10,6 +10,18 @@ webpackJsonp([0],[
 	var React = __webpack_require__(/*! react */ 1);
 	window.React = React; // to enable dev tools
 	
+	var DemoLink = React.createClass({displayName: 'DemoLink',
+	  render: function() {
+	    var hrefRoot = "https://github.com/BinaryMuse/react-primer",
+	        href = hrefRoot + "/tree/gh-pages/demo" +
+	               this.props.demo + "/demo" + this.props.demo + ".jsx";
+	
+	    return this.transferPropsTo(
+	      React.DOM.a({href: href}, this.props.children)
+	    );
+	  }
+	});
+	
 	var LinkComponent = React.createClass({displayName: 'LinkComponent',
 	  render: function() {
 	    if (this.props.demo) {
@@ -18,7 +30,7 @@ webpackJsonp([0],[
 	                 this.props.demo + "/demo" + this.props.demo + ".jsx";
 	      return (
 	        React.DOM.p(null, "Annotated source code for this demo is available" + ' ' +
-	        "as ", React.DOM.a({href: href}, React.DOM.code(null, "demo", this.props.demo, ".jsx")), " in" + ' ' +
+	        "as ", DemoLink({demo: this.props.demo}, React.DOM.code(null, "demo", this.props.demo, ".jsx")), " in" + ' ' +
 	        "the ", React.DOM.code(null, "demo", this.props.demo), " directory of" + ' ' +
 	        "the project repository.", React.DOM.br(null), 
 	        React.DOM.a({href: "index.html"}, "Back to demo list"))
@@ -99,7 +111,8 @@ webpackJsonp([0],[
 	          var num = idx + 1;
 	          return (
 	            React.DOM.li({key: num}, 
-	              React.DOM.a({href: "index.html?" + num}, "Demo ", num, ": ", name)
+	              React.DOM.a({href: "index.html?" + num}, "Demo ", num, ": ", name), " -", 
+	              " ", DemoLink({demo: num}, "Source")
 	            )
 	          );
 	        })

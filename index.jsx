@@ -3,6 +3,18 @@
 var React = require("react");
 window.React = React; // to enable dev tools
 
+var DemoLink = React.createClass({
+  render: function() {
+    var hrefRoot = "https://github.com/BinaryMuse/react-primer",
+        href = hrefRoot + "/tree/gh-pages/demo" +
+               this.props.demo + "/demo" + this.props.demo + ".jsx";
+
+    return this.transferPropsTo(
+      <a href={href}>{this.props.children}</a>
+    );
+  }
+});
+
 var LinkComponent = React.createClass({
   render: function() {
     if (this.props.demo) {
@@ -11,7 +23,7 @@ var LinkComponent = React.createClass({
                  this.props.demo + "/demo" + this.props.demo + ".jsx";
       return (
         <p>Annotated source code for this demo is available
-        as <a href={href}><code>demo{this.props.demo}.jsx</code></a> in
+        as <DemoLink demo={this.props.demo}><code>demo{this.props.demo}.jsx</code></DemoLink> in
         the <code>demo{this.props.demo}</code> directory of
         the project repository.<br />
         <a href="index.html">Back to demo list</a></p>
@@ -92,7 +104,8 @@ function loadIndex() {
           var num = idx + 1;
           return (
             <li key={num}>
-              <a href={"index.html?" + num}>Demo {num}: {name}</a>
+              <a href={"index.html?" + num}>Demo {num}: {name}</a> -
+              {" "}<DemoLink demo={num}>Source</DemoLink>
             </li>
           );
         })}

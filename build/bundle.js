@@ -10,7 +10,7 @@ webpackJsonp([0],[
 	var React = __webpack_require__(/*! react */ 1);
 	window.React = React; // to enable dev tools
 	
-	var DemoLink = React.createClass({displayName: 'DemoLink',
+	var DemoSourceLink = React.createClass({displayName: 'DemoSourceLink',
 	  render: function() {
 	    var hrefRoot = "https://github.com/BinaryMuse/react-primer",
 	        href = hrefRoot + "/tree/gh-pages/demo" +
@@ -30,7 +30,7 @@ webpackJsonp([0],[
 	                 this.props.demo + "/demo" + this.props.demo + ".jsx";
 	      return (
 	        React.DOM.p(null, "Annotated source code for this demo is available" + ' ' +
-	        "as ", DemoLink({demo: this.props.demo}, React.DOM.code(null, "demo", this.props.demo, ".jsx")), " in" + ' ' +
+	        "as ", DemoSourceLink({demo: this.props.demo}, React.DOM.code(null, "demo", this.props.demo, ".jsx")), " in" + ' ' +
 	        "the ", React.DOM.code(null, "demo", this.props.demo), " directory of" + ' ' +
 	        "the project repository.", React.DOM.br(null), 
 	        React.DOM.a({href: "index.html"}, "Back to demo list"))
@@ -112,7 +112,7 @@ webpackJsonp([0],[
 	          return (
 	            React.DOM.li({key: num}, 
 	              React.DOM.a({href: "index.html?" + num}, "Demo ", num, ": ", name), " -", 
-	              " ", DemoLink({demo: num}, "Source")
+	              " ", DemoSourceLink({demo: num}, "Source")
 	            )
 	          );
 	        })

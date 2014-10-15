@@ -1,0 +1,20 @@
+{
+  "name": "react-demos",
+  "version": "1.0.0",
+  "description": "Some explanatory React demos",
+  "scripts": {
+    "start": "webpack -w -d",
+    "build": "webpack -d"
+  },
+  "author": "Brandon Tilley <brandon@brandontilley.com>",
+  "license": "MIT",
+  "dependencies": {
+    "jsx-loader": "^0.11.2",
+    "less": "^1.7.5",
+    "less-loader": "^0.7.7",
+    "react": "0.11.2",
+    "style-loader": "^0.8.1",
+    "webpack": "^1.4.7",
+    "webpack-dev-server": "^1.6.5"
+  }
+}

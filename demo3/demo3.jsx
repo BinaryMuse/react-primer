@@ -21,7 +21,8 @@ var Timer = React.createClass({
   },
 
   // ... and remove the timer when the component unmounts.
-  // If we don't do this, we'll leak memory.
+  // If we don't do this, we'll leak memory (and the timer
+  // will continue to fire).
   componentWillUnmount: function() {
     this.timer && clearInterval(this.timer);
   },

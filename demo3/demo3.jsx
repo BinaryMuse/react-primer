@@ -28,7 +28,9 @@ var Timer = React.createClass({
   },
 
   // Unlike properties, state is owned by the component, and
-  // can be changed using a few methods.
+  // can be changed using a few methods. Note that you should
+  // *never* modify `this.state` directly--always use an API
+  // method to mutate the state.
   //
   // Our timer calls `setState`, which allows us to update one or
   // more keys in our state. The object passed to `setState` is

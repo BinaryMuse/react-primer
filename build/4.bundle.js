@@ -1,6 +1,6 @@
 webpackJsonp([4],{
 
-/***/ 5:
+/***/ 6:
 /*!*************************!*\
   !*** ./demo4/demo4.jsx ***!
   \*************************/
@@ -70,7 +70,7 @@ webpackJsonp([4],{
 	    this.setState({text: e.target.value});
 	  },
 	
-	  // The form also has a handler for `onSubmit`..
+	  // The form also has a handler for `onSubmit`...
 	  onSubmit: function(e) {
 	    e.preventDefault();
 	    // ... which we'll use to indicate to our parent that an
@@ -103,7 +103,7 @@ webpackJsonp([4],{
 	  },
 	
 	  // `onSubmitTodo` is the function we pass to `TodoForm`'s
-	  // `onSubmit` property; so, it will be called with `TodoForm`
+	  // `onSubmit` property; so, it will be called when `TodoForm`
 	  // calls `this.props.onSubmit(...)`.
 	  onSubmitTodo: function(newTodo) {
 	    var nextItems = this.state.items.concat([newTodo]);

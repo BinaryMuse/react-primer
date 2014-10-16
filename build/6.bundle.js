@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 7:
+/***/ 8:
 /*!*************************!*\
   !*** ./demo6/demo6.jsx ***!
   \*************************/
@@ -14,8 +14,9 @@ webpackJsonp([6],{
 	
 	// This demo introduces the idea of a top-level data store
 	// that the main application uses to get state from;
-	// any time the store updates, it triggers a "changed"
-	// event and the `Application` component *completely* re-renders.
+	// any time the store updates, it triggers a "change"
+	// event and the `Application` component re-renders itself
+	// due to a call to `setState`.
 	//
 	// Because React uses a fast virtual DOM under the hood, the
 	// actual DOM doesn't get changed unless the output of the `render`
@@ -126,8 +127,8 @@ webpackJsonp([6],{
   \*************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var EventEmitter = __webpack_require__(/*! events */ 65).EventEmitter,
-	    util = __webpack_require__(/*! util */ 66);
+	var EventEmitter = __webpack_require__(/*! events */ 128).EventEmitter,
+	    util = __webpack_require__(/*! util */ 129);
 	
 	var id = 1;
 	
@@ -143,7 +144,7 @@ webpackJsonp([6],{
 	util.inherits(Store, EventEmitter);
 	
 	// Any time an item is added, removed, or changed,
-	// we emit a "change" event, which is used back in demo5.jsx.
+	// we emit a "change" event, which is used in the React component.
 	Store.prototype.addItem = function(color, width) {
 	  var item = {id: ++id, color: color, width: width};
 	  this.items.push(item);
@@ -286,7 +287,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 65:
+/***/ 128:
 /*!********************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/events/events.js ***!
   \********************************************************/
@@ -597,7 +598,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 66:
+/***/ 129:
 /*!****************************************************!*\
   !*** (webpack)/~/node-libs-browser/~/util/util.js ***!
   \****************************************************/

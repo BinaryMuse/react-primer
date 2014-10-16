@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 4:
+/***/ 5:
 /*!*************************!*\
   !*** ./demo3/demo3.jsx ***!
   \*************************/
@@ -29,14 +29,20 @@ webpackJsonp([3],{
 	  },
 	
 	  // ... and remove the timer when the component unmounts.
-	  // If we don't do this, we'll leak memory.
+	  // If we don't do this, we'll leak memory (and the timer
+	  // will continue to fire).
 	  componentWillUnmount: function() {
 	    this.timer && clearInterval(this.timer);
 	  },
 	
-	  // The timer calls `setState`, which allows us to update
-	  // our state. The object passed to `setState` is merged
-	  // with the current state; we can use `replaceState` instead
+	  // Unlike properties, state is owned by the component, and
+	  // can be changed using a few methods. Note that you should
+	  // *never* modify `this.state` directly--always use an API
+	  // method to mutate the state.
+	  //
+	  // Our timer calls `setState`, which allows us to update one or
+	  // more keys in our state. The object passed to `setState` is
+	  // merged with the current state; we can use `replaceState` instead
 	  // if we don't want to merge.
 	  tick: function() {
 	    this.setState({time: this.state.time + 1});

@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 2:
+/***/ 3:
 /*!*************************!*\
   !*** ./demo1/demo1.jsx ***!
   \*************************/
@@ -18,6 +18,10 @@ webpackJsonp([1],{
 	    // argument and their children as remaining arguments.
 	    // Here, we utilize `this.props`, which is an object
 	    // containing the properties passed to this component.
+	    //
+	    // Properties should be treated as immutable--you should
+	    // not try to change them from inside a component; they
+	    // belong to whoever passed them to you!
 	    return React.DOM.div(null, "Hello ", this.props.name,
 	      React.DOM.strong(null, "!")
 	    );

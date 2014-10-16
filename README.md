@@ -24,4 +24,4 @@ Further Reading
 
 The [React site](http://facebook.github.io/react/) has a ton of info, and I recommend checking it out. It also contains more in-depth API documentation.
 
-The "Top-Down Data Flow & shouldComponentUpdate" demo introduces the idea of a top-level data store that causes an application-wide re-render whenever its data changes; this is a nice stepping stone to the [flux architecture](http://facebook.github.io/flux/docs/overview.html).
+The "Top-Down Data Flow & shouldComponentUpdate" demo introduces the idea of a top-level data store that causes an application-wide re-render whenever its data changes; this is a nice stepping stone to the [flux architecture](http://facebook.github.io/flux/docs/overview.html), including flux libraries like [Fluxxor](http://fluxxor.com/).

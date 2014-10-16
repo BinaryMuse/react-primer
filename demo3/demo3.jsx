@@ -27,9 +27,12 @@ var Timer = React.createClass({
     this.timer && clearInterval(this.timer);
   },
 
-  // The timer calls `setState`, which allows us to update
-  // our state. The object passed to `setState` is merged
-  // with the current state; we can use `replaceState` instead
+  // Unlike properties, state is owned by the component, and
+  // can be changed using a few methods.
+  //
+  // Our timer calls `setState`, which allows us to update one or
+  // more keys in our state. The object passed to `setState` is
+  // merged with the current state; we can use `replaceState` instead
   // if we don't want to merge.
   tick: function() {
     this.setState({time: this.state.time + 1});

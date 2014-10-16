@@ -3,15 +3,18 @@ React Primer
 
 This little repo is designed to gently introduce developers into the wonderful world of React. Each demo's source is annotated with comments and can be read basically top-to-bottom.
 
+View the Demos
+--------------
+
 The demos are [available online](http://binarymuse.github.io/react-primer/build/).
 
 Running Locally
 ---------------
 
-Simply open `build/index.html` in your browser.
+Clone the repository and open `build/index.html` in your browser; the demos are pre-built and checked in to the repo.
 
-Installation/Building
----------------------
+Building
+--------
 
 Requires Node.js.
 

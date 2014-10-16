@@ -15,7 +15,7 @@ function Store() {
 util.inherits(Store, EventEmitter);
 
 // Any time an item is added, removed, or changed,
-// we emit a "change" event, which is used back in demo5.jsx.
+// we emit a "change" event, which is used in the React component.
 Store.prototype.addItem = function(color, width) {
   var item = {id: ++id, color: color, width: width};
   this.items.push(item);

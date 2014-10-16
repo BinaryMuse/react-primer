@@ -6,8 +6,9 @@ var React = require("react"),
 
 // This demo introduces the idea of a top-level data store
 // that the main application uses to get state from;
-// any time the store updates, it triggers a "changed"
-// event and the `Application` component *completely* re-renders.
+// any time the store updates, it triggers a "change"
+// event and the `Application` component re-renders itself
+// due to a call to `setState`.
 //
 // Because React uses a fast virtual DOM under the hood, the
 // actual DOM doesn't get changed unless the output of the `render`

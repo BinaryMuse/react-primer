@@ -11,8 +11,8 @@ var Item = React.createClass({
 
   // If any properties are not required, you can specify
   // default properties for them with `getDefaultProps`.
-  // Note this function is only evaluated once per component class
-  // (and is cached for future instances of that same component).
+  // Note this function is only evaluated once when the ReactElement
+  // is created (and is cached for future instances of that same component).
   getDefaultProps: function() {
     return {
       onChange: function() {},

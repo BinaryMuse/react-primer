@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 
 // While composition is the best technique for using components
@@ -52,7 +50,7 @@ var Timer = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Timer />,
   document.getElementById("container")
 );

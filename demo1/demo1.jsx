@@ -1,7 +1,8 @@
 var React = require("react");
 
-// Create a React component with `React.createClass`.
-var Hello = React.createClass({
+// Create a React class with `React.createClass`. Use
+// `React.createFactory` to turn it into a component factory.
+var Hello = React.createFactory(React.createClass({
   // Every component needs a `render` function that returns one
   // concrete (HTML) or composite (custom) component. Components
   // representing HTML exist in the `React.DOM` object.
@@ -18,12 +19,12 @@ var Hello = React.createClass({
       React.DOM.strong(null, "!")
     );
   }
-});
+}));
 
 // We can render a component into a DOM node with
-// `React.renderComponent`, which takes a component
+// `React.render`, which takes a component
 // and a DOM node to render into.
-React.renderComponent(
+React.render(
   // We pass `"Minerva"` as the `name` property, which is
   // used in `Hello`'s `render` function.
   Hello({name: "Minerva"}),

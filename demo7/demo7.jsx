@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 
 // Sometimes it's useful have a component that can
@@ -49,7 +47,7 @@ var CodeListing = React.createClass({
 var Application = React.createClass({
   render: function() {
       var code = [
-        'React.renderComponent(',
+        'React.render(',
         '  // We pass `"Minerva"` as the `name` property, which is',
         '  // used in `Hello`\'s `render` function.',
         '  Hello({name: "Minerva"}),',
@@ -71,7 +69,7 @@ var Application = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Application />,
   document.getElementById("container")
 );

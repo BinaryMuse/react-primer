@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 
 var TodoList = React.createClass({
@@ -113,7 +111,7 @@ var Todos = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Todos />,
   document.getElementById("container")
 );

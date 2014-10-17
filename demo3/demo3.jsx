@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 
 var Timer = React.createClass({
@@ -48,7 +46,7 @@ var Timer = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Timer />,
   document.getElementById("container")
 );

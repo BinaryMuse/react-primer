@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react"),
     Store = require("./store.jsx"),
     Item = require("./item.jsx");
@@ -105,7 +103,7 @@ var Application = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Application />,
   document.getElementById("container")
 );

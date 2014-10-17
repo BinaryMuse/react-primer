@@ -4,7 +4,7 @@
   "description": "Some explanatory React demos",
   "scripts": {
     "start": "webpack -w -d",
-    "build": "webpack -d"
+    "build": "NODE_ENV=production webpack -d"
   },
   "author": "Brandon Tilley <brandon@brandontilley.com>",
   "license": "MIT",

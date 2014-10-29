@@ -1,9 +1,7 @@
-/** @jsx React.DOM */
-
 var React = require("react");
 
 // Sometimes it's useful have a component that can
-// wrap other arbitrary components. React provides
+// wrap other arbitrary ReactElements. React provides
 // `this.props.children` for this purpose.
 //
 // For example, given the following JSX:
@@ -23,13 +21,13 @@ var CodeListing = React.createClass({
     filename: React.PropTypes.string
   },
 
-  getDefaultProps: function() {
+  getDefaultProps() {
     return {
       filename: "unnamed file"
     };
   },
 
-  render: function() {
+  render() {
     var filenameStyle = {
       backgroundColor: "black",
       color: "white",
@@ -47,18 +45,18 @@ var CodeListing = React.createClass({
 });
 
 var Application = React.createClass({
-  render: function() {
+  render() {
       var code = [
-        'React.renderComponent(',
+        'React.render(',
         '  // We pass `"Minerva"` as the `name` property, which is',
-        '  // used in `Hello`\'s `render` function.',
-        '  Hello({name: "Minerva"}),',
+        '  // used in `HelloComponent`\'s `render` function.',
+        '  HelloElementFactory({name: "Minerva"}),',
         '  document.getElementById("container")',
         ');'
       ].join("\n");
 
     // We simply wrap whatever we want to show up in the code listing
-    // in a `<CodeListing>` component, and it's provided as
+    // in a `<CodeListing>` element, and it's provided as
     // `this.props.children` in the `CodeListing` component.
     return (
       <div>
@@ -71,7 +69,7 @@ var Application = React.createClass({
   }
 });
 
-React.renderComponent(
+React.render(
   <Application />,
   document.getElementById("container")
 );

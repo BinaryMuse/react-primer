@@ -1,7 +1,4 @@
-/** @jsx React.DOM */
-
 var React = require("react");
-window.React = React; // to enable dev tools
 React.initializeTouchEvents(true);
 
 var DemoSourceLink = React.createClass({
@@ -10,9 +7,7 @@ var DemoSourceLink = React.createClass({
         href = hrefRoot + "/tree/gh-pages/demo" +
                this.props.demo + "/demo" + this.props.demo + ".jsx";
 
-    return this.transferPropsTo(
-      <a href={href}>{this.props.children}</a>
-    );
+    return <a {...this.props} href={href}>{this.props.children}</a>;
   }
 });
 
@@ -90,8 +85,8 @@ switch (demo) {
 }
 
 function showDemoLink(num) {
-  React.renderComponent(<LinkComponent demo={num} />,
-                        document.getElementById("source-link"));
+  React.render(<LinkComponent demo={num} />,
+               document.getElementById("source-link"));
 }
 
 function loadIndex() {
@@ -122,6 +117,6 @@ function loadIndex() {
     }
   });
 
-  React.renderComponent(<App />, document.getElementById("container"));
-  React.renderComponent(<LinkComponent />, document.getElementById("source-link"));
+  React.render(<App />, document.getElementById("container"));
+  React.render(<LinkComponent />, document.getElementById("source-link"));
 }

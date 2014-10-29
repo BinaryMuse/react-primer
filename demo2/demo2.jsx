@@ -1,34 +1,27 @@
-/** @jsx React.DOM */
-
-// JSX is an XML-like syntax that simplifies composing React
-// components. The @jsx pragma is required at the top of the
-// file to tell React where the default HTML components live.
+// JSX is an XML-like syntax that simplifies composing React components.
 
 var React = require("react");
 
-var Hello = React.createClass({
-  render: function() {
+// When using JSX, you don't have to worry about creating
+// ReactElements or factories to generate them. JSX handles
+// all these details for you. This demo is functionally
+// identical to Demo 1.
+var HelloComponent = React.createClass({
+  // The JSX transpiler also supports (optional) ES6 features,
+  // such as concise method syntax, which we're using here.
+  render() {
     // Children are composed just like child XML/HTML nodes.
     // `{...}` can be used to interpolate raw JavaScript.
     return <div>Hello {this.props.name}<strong>!</strong></div>;
   }
 });
 
-React.renderComponent(
+React.render(
   // Properties look like HTML attributes.
-  <Hello name="Minerva" />,
+  <HelloComponent name="Minerva" />,
   document.getElementById("container")
 );
 
-// JSX compiles directly to JavaScript functions.
-// That is to say,
-//
-//   <Component prop={this.props.name}>
-//     <strong>Hello</strong>
-//   </Component>
-//
-// is exactly the same as
-//
-//   Component({prop: this.props.name},
-//     React.DOM.strong(null, "Hello")
-//   )
+// It's worth noting that JSX assumes all calls with a
+// <lowercaseInitialLetter> refers to an actual HTML element,
+// and all custom components must have an <UppercaseInitialLetter>.

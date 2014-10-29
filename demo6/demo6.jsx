@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 var React = require("react"),
     Store = require("./store.jsx"),
     Item = require("./item.jsx");
@@ -20,17 +18,9 @@ var store = new Store();
 
 // Here are a few utility functions which help us abstract away
 // the store API from the `Application` component.
-function addItem(color, width) {
-  store.addItem(color, width);
-}
-
-function removeItem(itemId) {
-  store.removeItem(itemId);
-}
-
-function changeItem(itemId, color, width) {
-  store.changeItem(itemId, color, width);
-}
+var addItem    = (color, width)         => store.addItem(color, width);
+var removeItem = (itemId)               => store.removeItem(itemId);
+var changeItem = (itemId, color, width) => store.changeItem(itemId, color, width);
 
 function randomColor() {
   var hex = Math.floor(Math.random() * 16777215).toString(16);
@@ -42,46 +32,46 @@ function randomColor() {
 
 var Application = React.createClass({
   // When the application first mounts...
-  getInitialState: function() {
+  getInitialState() {
     return this.getStateFromStore();
   },
 
   // ... and whenever the store emits a "change" event...
-  componentDidMount: function() {
-    store.on("change", function() {
+  componentDidMount() {
+    store.on("change", () => {
       this.setState(this.getStateFromStore());
-    }.bind(this))
+    });
   },
 
   // ... we set the component's state to this object. Note
   // we don't do any intelligent diffing to figure out
   // which items in the `store.items` array actually changed;
   // React does this for us.
-  getStateFromStore: function() {
+  getStateFromStore() {
     return {
       items: store.items
     };
   },
 
-  handleItemChange: function(itemId, color, width) {
+  handleItemChange(itemId, color, width) {
     changeItem(itemId, color, width);
   },
 
-  handleRemoveItem: function(itemId) {
+  handleRemoveItem(itemId) {
     removeItem(itemId);
   },
 
-  addItem: function() {
+  addItem() {
     addItem(randomColor(), Math.floor(Math.random() * 800 + 200));
   },
 
-  addManyItems: function() {
+  addManyItems() {
     for (var i = 0; i < 1000; i++) {
       this.addItem();
     }
   },
 
-  render: function() {
+  render() {
     // For each item in the `items` state property, we render
     // an `Item` component. Notice each one has a `key` of the item's
     // ID, since the items can be removed from inside the middle
@@ -94,18 +84,18 @@ var Application = React.createClass({
           <button onClick={this.addItem}>Add New Item</button>
           <button onClick={this.addManyItems}>Add Many Items</button>
         </div>
-        {this.state.items.map(function(item) {
+        {this.state.items.map((item) => {
           return <Item color={item.color} width={item.width}
                        id={item.id} key={item.id}
                        onChange={this.handleItemChange}
                        onRemove={this.handleRemoveItem} />
-        }.bind(this))}
+        })}
       </div>
     );
   }
 });
 
-React.renderComponent(
+React.render(
   <Application />,
   document.getElementById("container")
 );

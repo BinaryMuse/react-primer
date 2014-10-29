@@ -21,3 +21,7 @@ React.render(
   <HelloComponent name="Minerva" />,
   document.getElementById("container")
 );
+
+// It's worth noting that JSX assumes all calls with a
+// <lowercaseInitialLetter> refers to an actual HTML element,
+// and all custom components must have an <UppercaseInitialLetter>.

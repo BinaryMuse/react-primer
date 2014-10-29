@@ -11,25 +11,26 @@ var React = require("react");
 var SetIntervalMixin = {
   // Many lifecycle hooks are automatically merged with the
   // same hook defined in other mixins or the component itself.
-  componentWillMount: function() {
+  componentWillMount() {
     this.intervals = [];
   },
 
   // Mixins can also define other methods to make available
   // to the component.
-  setInterval: function() {
+  setInterval() {
     this.intervals.push(setInterval.apply(null, arguments));
   },
 
-  componentWillUnmount: function() {
+  componentWillUnmount() {
     this.intervals.forEach(clearInterval);
   }
 };
 
 var Timer = React.createClass({
+  // Use a mixin by adding it to the `mixins` array for a component.
   mixins: [SetIntervalMixin],
 
-  getInitialState: function() {
+  getInitialState() {
     return {
       time: 0
     };
@@ -37,15 +38,15 @@ var Timer = React.createClass({
 
   // Now we can use the mixin to set the interval without worrying
   // about setting our own `componentWillUnmount` hook.
-  componentDidMount: function() {
+  componentDidMount() {
     this.setInterval(this.tick, 1000);
   },
 
-  tick: function() {
+  tick() {
     this.setState({time: this.state.time + 1});
   },
 
-  render: function() {
+  render() {
     return <div>Time: {this.state.time}</div>;
   }
 });

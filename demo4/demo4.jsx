@@ -4,20 +4,26 @@ var TodoList = React.createClass({
   // `TodoList` takes a prop called `items` which is an array of
   // strings. We can make this requirement "official" using propTypes.
   // If a component doesn't get the properties listed in its
-  // propTypes, it will warn you in the console (if using the dev build).
+  // propTypes, it will warn you in the console (if using a development
+  // build of React).
   propTypes: {
     items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
   },
 
-  render: function() {
+  render() {
     // Every component in an array should have a `key` attribute
     // set so React can uniquely identify the item if it needs
     // to remove it from the middle of the array without iterating
     // over every component in the array.
     // Since our todos can't be reordered, we'll just use the index.
+    //
+    // Also notice the use of another ES6 feature in the call to `map`,
+    // arrow functions. The bodies of arrow functions are automatically
+    // bound to the value of `this` outside of them, so no more calling
+    // `.bind(this)` or `var self = this` juggling.
     return (
       <ul>
-      {this.props.items.map(function(item, index) {
+      {this.props.items.map((item, index) => {
         return <li key={index}>{item}</li>;
       })}
       </ul>
@@ -42,7 +48,7 @@ var TodoForm = React.createClass({
   // will *always* display whatever is passed to its `value` no matter
   // what the user tries to type in the box. The `text` property of
   // our state is the current string to display in the box.
-  getInitialState: function() {
+  getInitialState() {
     return {
       text: ""
     };
@@ -56,21 +62,23 @@ var TodoForm = React.createClass({
   // *always* describe how the component should look at *any* point and time;
   // if we didn't use a controlled input, the text might reset in certain
   // re-rendering situations.
-  onTextChange: function(e) {
+  onTextChange(e) {
     this.setState({text: e.target.value});
   },
 
   // The form also has a handler for `onSubmit`...
-  onSubmit: function(e) {
+  onSubmit(e) {
     e.preventDefault();
-    // ... which we'll use to indicate to our parent that an
-    // item has been submitted...
-    this.props.onSubmit(this.state.text);
-    // ... and then clear the text box.
-    this.setState({text: ""});
+    if (this.state.text.trim()) {
+      // ... which we'll use to indicate to our parent that an
+      // item has been submitted...
+      this.props.onSubmit(this.state.text);
+      // ... and then clear the text box.
+      this.setState({text: ""});
+    }
   },
 
-  render: function() {
+  render() {
     return (
       <form onSubmit={this.onSubmit}>
         <input type="text" value={this.state.text} onChange={this.onTextChange} />
@@ -83,7 +91,7 @@ var TodoForm = React.createClass({
 // Our `Todos` component is the full application, which very simply composes
 // the `TodoList` an `TodoForm` components.
 var Todos = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     // It owns the actual items array, so the composed `TodoList`
     // and `TodoForm` can be reused in many contexts (that is, they
     // are not application specific).
@@ -95,12 +103,12 @@ var Todos = React.createClass({
   // `onSubmitTodo` is the function we pass to `TodoForm`'s
   // `onSubmit` property; so, it will be called when `TodoForm`
   // calls `this.props.onSubmit(...)`.
-  onSubmitTodo: function(newTodo) {
+  onSubmitTodo(newTodo) {
     var nextItems = this.state.items.concat([newTodo]);
     this.setState({items: nextItems});
   },
 
-  render: function() {
+  render() {
     return (
       <div>
         <h3>TODO</h3>

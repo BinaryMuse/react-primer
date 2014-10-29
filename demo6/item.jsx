@@ -11,9 +11,9 @@ var Item = React.createClass({
 
   // If any properties are not required, you can specify
   // default properties for them with `getDefaultProps`.
-  // Note this function is only evaluated once when the ReactElement
-  // is created (and is cached for future instances of that same component).
-  getDefaultProps: function() {
+  // Note this function is only evaluated once when the ReactComponent class
+  // is defined (and is cached for future instances of that same component).
+  getDefaultProps() {
     return {
       onChange: function() {},
       onRemove: function() {}
@@ -27,7 +27,7 @@ var Item = React.createClass({
   // For example, to only re-render if the props or state have changed
   // (based on a shallow check), you could use:
   //
-  //   shouldComponentUpdate: function(nextProps, nextState) {
+  //   shouldComponentUpdate(nextProps, nextState) {
   //     return !shallowEqual(this.props, nextProps) ||
   //            !shallowEqual(this.state, nextState);
   //   },
@@ -44,22 +44,22 @@ var Item = React.createClass({
   mixins: [React.addons.PureRenderMixin],
 
   // All changes to the item are delegated to the parent via properties.
-  handleColorChange: function(e) {
+  handleColorChange(e) {
     this.props.onChange(this.props.id, e.target.value, this.props.width);
   },
 
-  handleWidthChange: function(e) {
+  handleWidthChange(e) {
     var width = ~~e.target.value;
     this.props.onChange(this.props.id, this.props.color, width);
   },
 
-  handleRemoveClick: function() {
+  handleRemoveClick() {
     this.props.onRemove(this.props.id);
   },
 
-  render: function() {
-    // The special `style` property on React.DOM-based components
-    // allow you to specify styles as a hash. Another common property
+  render() {
+    // The special `style` property on React.DOM-based ReactElements
+    // allows you to specify styles as a hash. Another common property
     // is `className`, which allows you to specify a string to use
     // for the element's `class` attribute.
     var style = {

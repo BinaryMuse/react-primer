@@ -83,7 +83,7 @@ var TodoForm = React.createClass({
 });
 
 // Our `Todos` component is the full application, which very simply composes
-// the `TodoList` an `TodoForm` components.
+// the `TodoList` and `TodoForm` components.
 var Todos = React.createClass({
   getInitialState: function() {
     // It owns the actual items array, so the composed `TodoList`

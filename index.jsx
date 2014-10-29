@@ -1,5 +1,4 @@
 var React = require("react");
-window.React = React; // to enable dev tools
 React.initializeTouchEvents(true);
 
 var DemoSourceLink = React.createClass({

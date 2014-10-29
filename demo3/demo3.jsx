@@ -35,6 +35,11 @@ var Timer = React.createClass({
   // merged with the current state; we can use `replaceState` instead
   // if we don't want to merge.
   tick() {
+    // Note that React auto-binds all top-level methods in the
+    // object passed to `createClass` to the component instance.
+    // Because of this, `this` inside the `tick` method is
+    // automatically the component instance, and we didn't have
+    // to use `this.tick.bind(this)` inside the `setInterval` call.
     this.setState({time: this.state.time + 1});
   },
 

@@ -2,6 +2,8 @@ var React = require("react"),
     Store = require("./store.jsx"),
     Item = require("./item.jsx");
 
+require("./demo6.less");
+
 // This demo introduces the idea of a top-level data store
 // that the main application uses to get state from;
 // any time the store updates, it triggers a "change"

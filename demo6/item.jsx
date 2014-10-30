@@ -63,13 +63,8 @@ var Item = React.createClass({
     // is `className`, which allows you to specify a string to use
     // for the element's `class` attribute.
     var style = {
-      border: "1px solid black",
       background: this.props.color,
-      width: this.props.width,
-      height: 70,
-      display: "block",
-      padding: 20,
-      margin: "10px 0"
+      width: this.props.width
     };
 
     // Notice all inputs are controlled inputs; that is to say,
@@ -79,7 +74,7 @@ var Item = React.createClass({
     // re-render with different properties that the inputs
     // are actually editable.
     return (
-      <div style={style}>
+      <div style={style} className="item">
         <div>
           <input type="text" value={this.props.color}
                  onChange={this.handleColorChange} />

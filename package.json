@@ -9,6 +9,7 @@
   "author": "Brandon Tilley <brandon@brandontilley.com>",
   "license": "MIT",
   "dependencies": {
+    "css-loader": "^0.9.0",
     "jsx-loader": "^0.12.0",
     "less": "^1.7.5",
     "less-loader": "^0.7.7",

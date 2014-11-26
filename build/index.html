@@ -1,18 +1,38 @@
 <!doctype html>
 
 <title>React Primer</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="prism.css" type="text/css">
 <style>
 pre {
   overflow: auto;
 }
+
+pre[class*="language-"] {
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 14px;
+}
+
+#container {
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
 </style>
 
+<div id="demo-title"></div>
 <div id="container"></div>
 
 <hr>
 
 <p id="source-link"></p>
+<p id="source-files"></p>
 
+<script src="prism.min.js"></script>
 <script src="vendor.bundle.js"></script>
 <script src="bundle.js"></script>

@@ -22,6 +22,7 @@ var store = new Store();
 var addItem    = (color, width)         => store.addItem(color, width);
 var removeItem = (itemId)               => store.removeItem(itemId);
 var changeItem = (itemId, color, width) => store.changeItem(itemId, color, width);
+var clearItems = ()                     => store.clearItems();
 
 function randomColor() {
   var hex = Math.floor(Math.random() * 16777215).toString(16);
@@ -50,6 +51,10 @@ var Application = React.createClass({
     }
   },
 
+  clearItems() {
+    clearItems();
+  },
+
   render() {
     // For each item in the `items` property, we render
     // an `Item` component. Notice each one has a `key` of the item's
@@ -64,6 +69,7 @@ var Application = React.createClass({
         <div>
           <button onClick={this.addItem}>Add New Item</button>
           <button onClick={this.addManyItems}>Add Many Items</button>
+          <button onClick={this.clearItems}>Remove All Items</button>
         </div>
         {this.props.items.map((item) => {
           return <Item color={item.color} width={item.width}

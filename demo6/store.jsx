@@ -40,6 +40,12 @@ class Store extends EventEmitter {
     item.width = width;
     this.emit("change");
   }
+
+  clearItems() {
+    this.items = [];
+    this.itemsById = {};
+    this.emit("change");
+  }
 }
 
 module.exports = Store;

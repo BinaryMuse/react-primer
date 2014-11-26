@@ -5,10 +5,9 @@ var React = require("react"),
 require("./demo6.less");
 
 // This demo introduces the idea of a top-level data store
-// that the main application uses to get state from;
+// that the main application uses to get data from;
 // any time the store updates, it triggers a "change"
-// event and the `Application` component re-renders itself
-// due to a call to `setState`.
+// event and the `Application` component gets re-rendered.
 //
 // Because React uses a fast virtual DOM under the hood, the
 // actual DOM doesn't get changed unless the output of the `render`
@@ -33,28 +32,6 @@ function randomColor() {
 }
 
 var Application = React.createClass({
-  // When the application first mounts...
-  getInitialState() {
-    return this.getStateFromStore();
-  },
-
-  // ... and whenever the store emits a "change" event...
-  componentDidMount() {
-    store.on("change", () => {
-      this.setState(this.getStateFromStore());
-    });
-  },
-
-  // ... we set the component's state to this object. Note
-  // we don't do any intelligent diffing to figure out
-  // which items in the `store.items` array actually changed;
-  // React does this for us.
-  getStateFromStore() {
-    return {
-      items: store.items
-    };
-  },
-
   handleItemChange(itemId, color, width) {
     changeItem(itemId, color, width);
   },
@@ -74,19 +51,21 @@ var Application = React.createClass({
   },
 
   render() {
-    // For each item in the `items` state property, we render
+    // For each item in the `items` property, we render
     // an `Item` component. Notice each one has a `key` of the item's
     // ID, since the items can be removed from inside the middle
     // of the array.
     //
-    // Take a look at `item.jsx` to see the rest of the application.
+    // Take a look at `item.jsx` to see how the Item component
+    // is implemented, including the ability to do fast updates
+    // via `shouldComponentUpdate`.
     return (
       <div>
         <div>
           <button onClick={this.addItem}>Add New Item</button>
           <button onClick={this.addManyItems}>Add Many Items</button>
         </div>
-        {this.state.items.map((item) => {
+        {this.props.items.map((item) => {
           return <Item color={item.color} width={item.width}
                        id={item.id} key={item.id}
                        onChange={this.handleItemChange}
@@ -97,7 +76,17 @@ var Application = React.createClass({
   }
 });
 
-React.render(
-  <Application />,
-  document.getElementById("container")
-);
+var renderApp = () => {
+  // When we render the application, we pass the store's
+  // data via the `items` property.
+  React.render(
+    <Application items={store.items} />,
+    document.getElementById("container")
+  );
+}
+
+// Any time the store emits a change event, we re-render
+// the application; React is smart enough to reuse the existing
+// component and simply pass it the new properties.
+store.on("change", renderApp);
+renderApp();

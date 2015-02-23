@@ -4,7 +4,7 @@ var React = require("react");
 // class to `React.createFactory` to create a function that, when
 // called, creates a `ReactElement` object with that type.
 // React uses ReactElements to create a virtual DOM that determines
-// how the realm DOM should look and behave.
+// how the real DOM should look and behave.
 var HelloComponent = React.createClass({
   // Every component needs a `render` function that returns a
   // ReactNode. A ReactNode is either:

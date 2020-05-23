@@ -1,4 +1,4 @@
-var React = require("react");
+import React from "react"
 
 var TodoList = React.createClass({
   // `TodoList` takes a prop called `items` which is an array of
@@ -7,7 +7,7 @@ var TodoList = React.createClass({
   // propTypes, it will warn you in the console (if using a development
   // build of React).
   propTypes: {
-    items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired
+    items: React.PropTypes.arrayOf(React.PropTypes.string).isRequired,
   },
 
   render() {
@@ -23,13 +23,13 @@ var TodoList = React.createClass({
     // `.bind(this)` or `var self = this` juggling.
     return (
       <ul>
-      {this.props.items.map((item, index) => {
-        return <li key={index}>{item}</li>;
-      })}
+        {this.props.items.map((item, index) => {
+          return <li key={index}>{item}</li>
+        })}
       </ul>
-    );
-  }
-});
+    )
+  },
+})
 
 var TodoForm = React.createClass({
   // React has PropTypes for most built-in JS types, as well as the
@@ -40,7 +40,7 @@ var TodoForm = React.createClass({
   // the component more reusable, since the logic for what to do with
   // the submitted form isn't hardcoded into the `TodoForm` component.
   propTypes: {
-    onSubmit: React.PropTypes.func.isRequired
+    onSubmit: React.PropTypes.func.isRequired,
   },
 
   // `TodoForm` contains a text input with a `value` attribute, which
@@ -50,8 +50,8 @@ var TodoForm = React.createClass({
   // our state is the current string to display in the box.
   getInitialState() {
     return {
-      text: ""
-    };
+      text: "",
+    }
   },
 
   // The text input has an `onChange` property, which calls a function
@@ -63,30 +63,34 @@ var TodoForm = React.createClass({
   // if we didn't use a controlled input, the text might reset in certain
   // re-rendering situations.
   onTextChange(e) {
-    this.setState({text: e.target.value});
+    this.setState({ text: e.target.value })
   },
 
   // The form also has a handler for `onSubmit`...
   onSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     if (this.state.text.trim()) {
       // ... which we'll use to indicate to our parent that an
       // item has been submitted...
-      this.props.onSubmit(this.state.text);
+      this.props.onSubmit(this.state.text)
       // ... and then clear the text box.
-      this.setState({text: ""});
+      this.setState({ text: "" })
     }
   },
 
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <input type="text" value={this.state.text} onChange={this.onTextChange} />
+        <input
+          type="text"
+          value={this.state.text}
+          onChange={this.onTextChange}
+        />
         <input type="submit" value="Add Todo" />
       </form>
-    );
-  }
-});
+    )
+  },
+})
 
 // Our `Todos` component is the full application, which very simply composes
 // the `TodoList` and `TodoForm` components.
@@ -96,16 +100,16 @@ var Todos = React.createClass({
     // and `TodoForm` can be reused in many contexts (that is, they
     // are not application specific).
     return {
-      items: []
-    };
+      items: [],
+    }
   },
 
   // `onSubmitTodo` is the function we pass to `TodoForm`'s
   // `onSubmit` property; so, it will be called when `TodoForm`
   // calls `this.props.onSubmit(...)`.
   onSubmitTodo(newTodo) {
-    var nextItems = this.state.items.concat([newTodo]);
-    this.setState({items: nextItems});
+    var nextItems = this.state.items.concat([newTodo])
+    this.setState({ items: nextItems })
   },
 
   render() {
@@ -115,11 +119,8 @@ var Todos = React.createClass({
         <TodoList items={this.state.items} />
         <TodoForm onSubmit={this.onSubmitTodo} />
       </div>
-    );
-  }
-});
+    )
+  },
+})
 
-React.render(
-  <Todos />,
-  document.getElementById("container")
-);
+React.render(<Todos />, document.getElementById("container"))

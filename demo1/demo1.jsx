@@ -1,51 +1,38 @@
-var React = require("react");
+import React from "react"
+import ReactDOM from "react-dom"
 
-// Create a ReactComponent class with `React.createClass`. Pass the
-// class to `React.createFactory` to create a function that, when
-// called, creates a `ReactElement` object with that type.
-// React uses ReactElements to create a virtual DOM that determines
-// how the real DOM should look and behave.
-var HelloComponent = React.createClass({
-  // Every component needs a `render` function that returns a
-  // ReactNode. A ReactNode is either:
-  //
-  //  * a ReactElement
-  //  * a string (aka ReactText)
-  //  * a number (aka ReactText)
-  //  * an array of ReactNodes (aka ReactFragment)
-  //
-  // ReactElement factories that produce ReactElements that represent
-  // native HTML elements can be found on `React.DOM`.
-  render: function() {
-    // ReactElement factories take a hash of properties as their
-    // first argument and their children as remaining arguments.
-    // Here, we utilize `this.props`, which is an object
-    // containing the properties passed to this component.
+// There are a couple different ways to define React components in modern
+// versions of React. To start, we'll look at class components, which were
+// supported earliest.
+//
+// Create a React component class by extending React.Component
+class HelloComponent extends React.Component {
+  // Every component needs a `render` method that returns some content.
+  render() {
+    // Most often, you'll want to render HTML to the page. React allows you to
+    // do this using React elements, which you can create using
+    // `React.createElement()`
     //
-    // Properties should be treated as immutable--you should
-    // not try to change them from inside a component; they
-    // belong to whoever passed them to you!
-    return React.DOM.div(null, "Hello ", this.props.name,
-      React.DOM.strong(null, "!")
-    );
+    // React.createElement takes three arguments:
+    return React.createElement(
+      "div", // the first is the type of element
+      null, // the second is an object for the properties — more later
+      `Hi, ${this.props.name}!` // and the third is the content to place inside it
+      // Note that this string uses a value from `this.props`.
+      // We'll see where that comes from soon.
+    )
   }
-});
+}
 
-var HelloElementFactory = React.createFactory(HelloComponent);
-// ReactElement factories are just a convenience for creating new
-// ReactElements.
-//
-//     var element = HelloElementFactory(properties, children...)
-//
-// is the same as
-//
-//     var element = React.createElement(HelloComponent, properties, children...)
-
-// We can render a component into a DOM node with `React.render`,
-// which takes a ReactElement and a DOM node to render into.
-React.render(
-  // We pass `"Minerva"` as the `name` property, which is
-  // used in `HelloComponent`'s `render` function.
-  HelloElementFactory({name: "Minerva"}),
+// We can render a component into a DOM node with `ReactDOM.render`,
+// exported from the 'react-dom' package. It takes a React element
+// to render and a DOM node to render into as arguments.
+ReactDOM.render(
+  // Here we'll create another React element, but instead of
+  // rendering an HTML element, we'll pass in a reference to the
+  // component we created above. We'll pass in an object with
+  // `name` set to "GitHub" as the properties; this is what
+  // `this.props` refers to in the example above.
+  React.createElement(HelloComponent, { name: "GitHub" }),
   document.getElementById("container")
-);
+)

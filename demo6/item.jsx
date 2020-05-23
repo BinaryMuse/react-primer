@@ -1,4 +1,4 @@
-var React = require("react");
+import React from "react"
 
 var Item = React.createClass({
   propTypes: {
@@ -6,7 +6,7 @@ var Item = React.createClass({
     onRemove: React.PropTypes.func,
     id: React.PropTypes.number.isRequired,
     color: React.PropTypes.string.isRequired,
-    width: React.PropTypes.number.isRequired
+    width: React.PropTypes.number.isRequired,
   },
 
   // If any properties are not required, you can specify
@@ -15,9 +15,9 @@ var Item = React.createClass({
   // is defined (and is cached for future instances of that same component).
   getDefaultProps() {
     return {
-      onChange: function() {},
-      onRemove: function() {}
-    };
+      onChange: function () {},
+      onRemove: function () {},
+    }
   },
 
   // React provides a `shouldComponentUpdate` hook that allows
@@ -45,16 +45,16 @@ var Item = React.createClass({
 
   // All changes to the item are delegated to the parent via properties.
   handleColorChange(e) {
-    this.props.onChange(this.props.id, e.target.value, this.props.width);
+    this.props.onChange(this.props.id, e.target.value, this.props.width)
   },
 
   handleWidthChange(e) {
-    var width = ~~e.target.value;
-    this.props.onChange(this.props.id, this.props.color, width);
+    var width = ~~e.target.value
+    this.props.onChange(this.props.id, this.props.color, width)
   },
 
   handleRemoveClick() {
-    this.props.onRemove(this.props.id);
+    this.props.onRemove(this.props.id)
   },
 
   render() {
@@ -64,8 +64,8 @@ var Item = React.createClass({
     // for the element's `class` attribute.
     var style = {
       background: this.props.color,
-      width: this.props.width
-    };
+      width: this.props.width,
+    }
 
     // Notice all inputs are controlled inputs; that is to say,
     // their value is "locked in" to whatever `this.props.color`
@@ -76,21 +76,28 @@ var Item = React.createClass({
     return (
       <div style={style} className="item">
         <div>
-          <input type="text" value={this.props.color}
-                 onChange={this.handleColorChange} />
+          <input
+            type="text"
+            value={this.props.color}
+            onChange={this.handleColorChange}
+          />
         </div>
         <div>
-          <input type="range" min={200} max={1000}
-                 value={this.props.width}
-                 onChange={this.handleWidthChange} />
+          <input
+            type="range"
+            min={200}
+            max={1000}
+            value={this.props.width}
+            onChange={this.handleWidthChange}
+          />
         </div>
         <div>{this.props.width}</div>
         <div>
           <button onClick={this.handleRemoveClick}>Remove</button>
         </div>
       </div>
-    );
-  }
-});
+    )
+  },
+})
 
-module.exports = Item;
+module.exports = Item

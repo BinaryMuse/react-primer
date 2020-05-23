@@ -1,6 +1,8 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import ReactPrism from "react-prism"
+import Prism from "prismjs"
+global.Prism = Prism
 
 var DEMOS = [
   "Components & Properties",
@@ -24,9 +26,6 @@ function DemoSourceLink({ demo, children, ...props }) {
 
 function LinkComponent({ demo }) {
   if (demo) {
-    // const hrefRoot = "https://github.com/BinaryMuse/react-primer",
-    // const href = hrefRoot + "/tree/gh-pages/demo" + this.props.demo + "/demo" + this.props.demo + ".jsx"
-
     return (
       <>
         <a href="index.html">Back to demo list</a>
@@ -62,10 +61,10 @@ function SourceCode({ files }) {
     color: selectedIndex === idx ? "black" : "#999",
   })
 
-  const fileStyle = {
+  const fileStyle = (idx) => ({
     display: selectedIndex === idx ? "block" : "none",
     clear: "both",
-  }
+  })
 
   return (
     <div>
@@ -84,9 +83,11 @@ function SourceCode({ files }) {
         ))}
       </ol>
       <div>
-        {files.map((file) => (
-          <pre key={file.name} className="line-numbers" style={fileStyle}>
-            <ReactPrism className="language-javascript">{file.code}</ReactPrism>
+        {files.map((file, idx) => (
+          <pre key={file.name} className="line-numbers" style={fileStyle(idx)}>
+            <ReactPrism className="language-javascript">
+              {file.code.default}
+            </ReactPrism>
           </pre>
         ))}
       </div>
@@ -163,19 +164,19 @@ switch (demo) {
 }
 
 function showDemoLink(num, files) {
-  React.render(
+  ReactDOM.render(
     <h1>
       Demo {num}: {DEMOS[num - 1]}
     </h1>,
     document.getElementById("demo-title")
   )
-  React.render(
+  ReactDOM.render(
     <LinkComponent demo={num} />,
     document.getElementById("source-link")
   )
 
   if (files && files.length) {
-    React.render(
+    ReactDOM.render(
       <SourceCode files={files} />,
       document.getElementById("source-files")
     )

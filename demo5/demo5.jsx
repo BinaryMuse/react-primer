@@ -1,4 +1,4 @@
-var React = require("react");
+import React from "react"
 
 // While composition is the best technique for using components
 // together, sometimes it's desirable to have cross-cutting concerns
@@ -12,19 +12,19 @@ var SetIntervalMixin = {
   // Many lifecycle hooks are automatically merged with the
   // same hook defined in other mixins or the component itself.
   componentWillMount() {
-    this.intervals = [];
+    this.intervals = []
   },
 
   // Mixins can also define other methods to make available
   // to the component.
   setInterval() {
-    this.intervals.push(setInterval.apply(null, arguments));
+    this.intervals.push(setInterval.apply(null, arguments))
   },
 
   componentWillUnmount() {
-    this.intervals.forEach(clearInterval);
-  }
-};
+    this.intervals.forEach(clearInterval)
+  },
+}
 
 var Timer = React.createClass({
   // Use a mixin by adding it to the `mixins` array for a component.
@@ -32,26 +32,23 @@ var Timer = React.createClass({
 
   getInitialState() {
     return {
-      time: 0
-    };
+      time: 0,
+    }
   },
 
   // Now we can use the mixin to set the interval without worrying
   // about setting our own `componentWillUnmount` hook.
   componentDidMount() {
-    this.setInterval(this.tick, 1000);
+    this.setInterval(this.tick, 1000)
   },
 
   tick() {
-    this.setState({time: this.state.time + 1});
+    this.setState({ time: this.state.time + 1 })
   },
 
   render() {
-    return <div>Time: {this.state.time}</div>;
-  }
-});
+    return <div>Time: {this.state.time}</div>
+  },
+})
 
-React.render(
-  <Timer />,
-  document.getElementById("container")
-);
+React.render(<Timer />, document.getElementById("container"))

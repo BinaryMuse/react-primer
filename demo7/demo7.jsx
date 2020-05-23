@@ -1,4 +1,4 @@
-var React = require("react");
+import React from "react"
 
 // Sometimes it's useful have a component that can
 // wrap other arbitrary ReactElements. React provides
@@ -18,13 +18,13 @@ var React = require("react");
 
 var CodeListing = React.createClass({
   propTypes: {
-    filename: React.PropTypes.string
+    filename: React.PropTypes.string,
   },
 
   getDefaultProps() {
     return {
-      filename: "unnamed file"
-    };
+      filename: "unnamed file",
+    }
   },
 
   render() {
@@ -32,28 +32,28 @@ var CodeListing = React.createClass({
       backgroundColor: "black",
       color: "white",
       padding: 5,
-      fontFamily: "monospace"
-    };
+      fontFamily: "monospace",
+    }
 
     return (
-      <div style={{border: "1px solid black"}}>
+      <div style={{ border: "1px solid black" }}>
         <div style={filenameStyle}>{this.props.filename}</div>
-        <pre style={{margin: 5}}>{this.props.children}</pre>
+        <pre style={{ margin: 5 }}>{this.props.children}</pre>
       </div>
-    );
-  }
-});
+    )
+  },
+})
 
 var Application = React.createClass({
   render() {
-      var code = [
-        'React.render(',
-        '  // We pass `"Minerva"` as the `name` property, which is',
-        '  // used in `HelloComponent`\'s `render` function.',
-        '  HelloElementFactory({name: "Minerva"}),',
-        '  document.getElementById("container")',
-        ');'
-      ].join("\n");
+    var code = [
+      "React.render(",
+      '  // We pass `"Minerva"` as the `name` property, which is',
+      "  // used in `HelloComponent`'s `render` function.",
+      '  HelloElementFactory({name: "Minerva"}),',
+      '  document.getElementById("container")',
+      ");",
+    ].join("\n")
 
     // We simply wrap whatever we want to show up in the code listing
     // in a `<CodeListing>` element, and it's provided as
@@ -65,11 +65,8 @@ var Application = React.createClass({
         <p>And some more:</p>
         <CodeListing>CodeListing with no "filename" property</CodeListing>
       </div>
-    );
-  }
-});
+    )
+  },
+})
 
-React.render(
-  <Application />,
-  document.getElementById("container")
-);
+React.render(<Application />, document.getElementById("container"))

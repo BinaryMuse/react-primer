@@ -1,7 +1,6 @@
-var React = require("react"),
-    ReactPrism = require("react-prism").PrismCode;
-
-React.initializeTouchEvents(true);
+import React from "react"
+import ReactDOM from "react-dom"
+import ReactPrism from "react-prism"
 
 var DEMOS = [
   "Components & Properties",
@@ -10,195 +9,197 @@ var DEMOS = [
   "Composition, PropTypes, & Event Handlers",
   "Mixins",
   "Top-Down Data Flow & shouldComponentUpdate",
-  "Wrapping Children with this.props.children"
-];
+  "Wrapping Children with this.props.children",
+]
 
-var DemoSourceLink = React.createClass({
-  render() {
-    var hrefRoot = "https://github.com/BinaryMuse/react-primer",
-        href = hrefRoot + "/tree/gh-pages/demo" +
-               this.props.demo + "/demo" + this.props.demo + ".jsx";
+function DemoSourceLink({ demo, children, ...props }) {
+  const root = "https://github.com/BinaryMuse/react-primer"
+  const href = `${root}/tree/gh-pages/demo${demo}/demo${demo}.jsx`
+  return (
+    <a {...props} href={href}>
+      {children}
+    </a>
+  )
+}
 
-    return <a {...this.props} href={href}>{this.props.children}</a>;
-  }
-});
+function LinkComponent({ demo }) {
+  if (demo) {
+    // const hrefRoot = "https://github.com/BinaryMuse/react-primer",
+    // const href = hrefRoot + "/tree/gh-pages/demo" + this.props.demo + "/demo" + this.props.demo + ".jsx"
 
-var LinkComponent = React.createClass({
-  render() {
-    if (this.props.demo) {
-      var hrefRoot = "https://github.com/BinaryMuse/react-primer",
-          href = hrefRoot + "/tree/gh-pages/demo" +
-                 this.props.demo + "/demo" + this.props.demo + ".jsx";
-      return (
-        <p>
+    return (
+      <>
         <a href="index.html">Back to demo list</a>
         &nbsp; &middot; &nbsp;
-        <DemoSourceLink demo={this.props.demo}>View on GitHub</DemoSourceLink>
-        </p>
-      );
-    } else {
-      return (
-        <p>Source code for each demo is available from the root of
-        the <a href="https://github.com/BinaryMuse/react-primer">project repository</a> and
-        at the bottom of each demo page.</p>
-      );
-    }
-  }
-});
-
-var SourceCode = React.createClass({
-  propTypes: {
-    files: React.PropTypes.arrayOf(
-      React.PropTypes.shape({
-        name: React.PropTypes.string.isRequired,
-        code: React.PropTypes.string.isRequired
-      }).isRequired
+        <DemoSourceLink demo={demo}>View on GitHub</DemoSourceLink>
+      </>
     )
-  },
-
-  getInitialState() {
-    return {
-      selectedIndex: 0
-    };
-  },
-
-  render() {
-    var olStyle = {
-      listStyle: "none",
-      paddingLeft: 0,
-      marginTop: 0
-    };
-
+  } else {
     return (
+      <>
+        Source code for each demo is available from the root of the{" "}
+        <a href="https://github.com/BinaryMuse/react-primer">
+          project repository
+        </a>{" "}
+        and at the bottom of each demo page.
+      </>
+    )
+  }
+}
+
+function SourceCode({ files }) {
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const olStyle = {
+    listStyle: "none",
+    paddingLeft: 0,
+    marginTop: 0,
+  }
+
+  const liStyle = (idx) => ({
+    float: "left",
+    padding: 10,
+    cursor: "pointer",
+    color: selectedIndex === idx ? "black" : "#999",
+  })
+
+  const fileStyle = {
+    display: selectedIndex === idx ? "block" : "none",
+    clear: "both",
+  }
+
+  return (
+    <div>
+      <h2>Demo Source</h2>
+      <ol style={olStyle}>
+        {files.map((file, idx) => (
+          <li
+            key={file.name}
+            style={liStyle(idx)}
+            onClick={() => {
+              setSelectedIndex(idx)
+            }}
+          >
+            {file.name}
+          </li>
+        ))}
+      </ol>
       <div>
-        <h2>Demo Source</h2>
-        <ol style={olStyle}>{this.props.files.map(this.renderSelector)}</ol>
-        <div>{this.props.files.map(this.renderFile)}</div>
+        {files.map((file) => (
+          <pre key={file.name} className="line-numbers" style={fileStyle}>
+            <ReactPrism className="language-javascript">{file.code}</ReactPrism>
+          </pre>
+        ))}
       </div>
-    );
-  },
+    </div>
+  )
+}
 
-  renderSelector(file, idx) {
-    var liStyle = {
-      float: "left",
-      padding: 10,
-      cursor: "pointer",
-      color: this.state.selectedIndex === idx ? "black" : "#999"
-    };
-
-    return (
-      <li key={file.name} style={liStyle} onClick={this.handleSelectorClick.bind(null, idx)}>
-        {file.name}
-      </li>
-    );
-  },
-
-  renderFile(file, idx) {
-    var style = {
-      display: this.state.selectedIndex === idx ? "block" : "none",
-      clear: "both"
-    };
-
-    return (
-      <pre key={file.name} className="line-numbers" style={style}>
-        <ReactPrism className="language-javascript">{file.code}</ReactPrism>
-      </pre>
-    )
-  },
-
-  handleSelectorClick(idx) {
-    this.setState({
-      selectedIndex: idx
-    });
-  }
-});
-
-var demo = ~~window.location.search.replace(/\?/, "");
+var demo = ~~window.location.search.replace(/\?/, "")
 
 // webpack must be able to statically analyze these,
 // so we can't generate them programmatically
 switch (demo) {
   case 1:
     require.ensure([], () => {
-      require("./demo1/demo1.jsx");
-      showDemoLink(demo, [{ name: "demo1.jsx", code: require("!!raw!./demo1/demo1.jsx")}]);
-    });
-    break;
+      require("./demo1/demo1.jsx")
+      showDemoLink(demo, [
+        { name: "demo1.jsx", code: require("!!raw-loader!./demo1/demo1.jsx") },
+      ])
+    })
+    break
   case 2:
     require.ensure([], () => {
-      require("./demo2/demo2.jsx");
-      showDemoLink(demo, [{name: 'demo2.jsx', code: require("!!raw!./demo2/demo2.jsx")}]);
-    });
-    break;
+      require("./demo2/demo2.jsx")
+      showDemoLink(demo, [
+        { name: "demo2.jsx", code: require("!!raw-loader!./demo2/demo2.jsx") },
+      ])
+    })
+    break
   case 3:
     require.ensure([], () => {
-      require("./demo3/demo3.jsx");
-      showDemoLink(demo, [{name: 'demo3.jsx', code: require("!!raw!./demo3/demo3.jsx")}]);
-    });
-    break;
+      require("./demo3/demo3.jsx")
+      showDemoLink(demo, [
+        { name: "demo3.jsx", code: require("!!raw-loader!./demo3/demo3.jsx") },
+      ])
+    })
+    break
   case 4:
     require.ensure([], () => {
-      require("./demo4/demo4.jsx");
-      showDemoLink(demo, [{name: 'demo4.jsx', code: require("!!raw!./demo4/demo4.jsx")}]);
-    });
-    break;
+      require("./demo4/demo4.jsx")
+      showDemoLink(demo, [
+        { name: "demo4.jsx", code: require("!!raw-loader!./demo4/demo4.jsx") },
+      ])
+    })
+    break
   case 5:
     require.ensure([], () => {
-      require("./demo5/demo5.jsx");
-      showDemoLink(demo, [{name: 'demo5.jsx', code: require("!!raw!./demo5/demo5.jsx")}]);
-    });
-    break;
+      require("./demo5/demo5.jsx")
+      showDemoLink(demo, [
+        { name: "demo5.jsx", code: require("!!raw-loader!./demo5/demo5.jsx") },
+      ])
+    })
+    break
   case 6:
     require.ensure([], () => {
-      require("./demo6/demo6.jsx");
+      require("./demo6/demo6.jsx")
       var code = [
-        { name: "demo6.jsx", code: require("!!raw!./demo6/demo6.jsx") },
-        { name: "store.jsx", code: require("!!raw!./demo6/store.jsx") },
-        { name: "item.jsx", code: require("!!raw!./demo6/item.jsx") }
-      ];
-      showDemoLink(demo, code);
-    });
-    break;
+        { name: "demo6.jsx", code: require("!!raw-loader!./demo6/demo6.jsx") },
+        { name: "store.jsx", code: require("!!raw-loader!./demo6/store.jsx") },
+        { name: "item.jsx", code: require("!!raw-loader!./demo6/item.jsx") },
+      ]
+      showDemoLink(demo, code)
+    })
+    break
   case 7:
     require.ensure([], () => {
-      require("./demo7/demo7.jsx");
-      showDemoLink(demo, [{name: 'demo7.jsx', code: require("!!raw!./demo7/demo7.jsx")}]);
-    });
-    break;
+      require("./demo7/demo7.jsx")
+      showDemoLink(demo, [
+        { name: "demo7.jsx", code: require("!!raw-loader!./demo7/demo7.jsx") },
+      ])
+    })
+    break
   default:
-    loadIndex();
+    loadIndex()
 }
 
 function showDemoLink(num, files) {
-  React.render(React.createElement("h1", null, `Demo ${num}: ${DEMOS[num - 1]}`),
-               document.getElementById("demo-title"));
-  React.render(<LinkComponent demo={num} />,
-               document.getElementById("source-link"));
+  React.render(
+    <h1>
+      Demo {num}: {DEMOS[num - 1]}
+    </h1>,
+    document.getElementById("demo-title")
+  )
+  React.render(
+    <LinkComponent demo={num} />,
+    document.getElementById("source-link")
+  )
 
   if (files && files.length) {
-    React.render(<SourceCode files={files} />,
-                 document.getElementById("source-files"));
+    React.render(
+      <SourceCode files={files} />,
+      document.getElementById("source-files")
+    )
   }
 }
 
 function loadIndex() {
-  var App = React.createClass({
-    render: function() {
-      return (
-        <ul>
+  function App() {
+    return (
+      <ul>
         {DEMOS.map((name, idx) => {
-          var num = idx + 1;
+          var num = idx + 1
           return (
             <li key={num}>
-              <a href={"index.html?" + num}>Demo {num}: {name}</a>
+              <a href={"index.html?" + num}>
+                Demo {num}: {name}
+              </a>
             </li>
-          );
+          )
         })}
-        </ul>
-      )
-    }
-  });
+      </ul>
+    )
+  }
 
-  React.render(<App />, document.getElementById("container"));
-  React.render(<LinkComponent />, document.getElementById("source-link"));
+  ReactDOM.render(<App />, document.getElementById("container"))
+  ReactDOM.render(<LinkComponent />, document.getElementById("source-link"))
 }
